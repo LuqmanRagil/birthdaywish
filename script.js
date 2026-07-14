@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ---------- Tombol pesan via WhatsApp ---------- */
   // Ganti nomor di bawah ini dengan nomor WhatsApp bisnis kamu
   // Format: kode negara tanpa "+" atau "0" di depan, contoh Indonesia: 6281234567890
-  const WHATSAPP_NUMBER = "6281234567890";
+  const WHATSAPP_NUMBER = "6285733745044";
 
   const buyButtons = document.querySelectorAll(".btn-buy");
 
