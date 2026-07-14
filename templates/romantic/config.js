@@ -52,7 +52,7 @@ window.CONFIG = {
   musikFile: "assets/music/musik.mp3",
 
   // Nomor WhatsApp kamu (penjual) untuk tombol "Pesan Template Ini" di halaman ini
-  nomorWhatsapp: "6281234567890",
+  nomorWhatsapp: "6285733745044",
   pesanWhatsapp: "Halo, saya juga ingin membuat website ucapan ulang tahun seperti ini",
 
   // Pengaturan efek confetti saat ucapan dibuka
