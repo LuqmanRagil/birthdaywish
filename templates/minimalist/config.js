@@ -27,7 +27,7 @@ window.CONFIG = {
   musikAktif: false,
   musikFile: "assets/music/musik.mp3",
 
-  nomorWhatsapp: "6281234567890",
+  nomorWhatsapp: "6285733745044",
   pesanWhatsapp: "Halo, saya juga ingin membuat website ucapan ulang tahun seperti ini",
 
   // Confetti dibuat lebih sedikit & lembut agar tetap terasa minimalis
