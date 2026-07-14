@@ -1,0 +1,4 @@
+Kalau pembeli ingin ada musik latar, taruh file musik (.mp3)
+di folder ini, lalu sesuaikan namanya di config.js pada
+bagian "musikFile". Kalau tidak pakai musik, set
+"musikAktif: false" di config.js dan folder ini bisa dikosongkan.

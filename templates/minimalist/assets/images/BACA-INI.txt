@@ -1,0 +1,6 @@
+Taruh 4 (atau berapa pun) foto kenangan pembeli di folder ini.
+Nama file bebas, tapi jangan lupa sesuaikan juga nama filenya
+di dalam config.js pada bagian "galeriFoto".
+
+Contoh:
+foto-1.jpg, foto-2.jpg, foto-3.jpg, foto-4.jpg

@@ -1,0 +1,68 @@
+/* =========================================================
+   THEME: ANIME STYLE
+   Palet pastel ceria (pink, biru muda), font membulat dan
+   playful. Aman diedit kalau mau menyesuaikan warna/font.
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&display=swap');
+
+:root {
+  --bg-deep: #ff9fc2;
+  --bg-darker: #4a2f55;
+  --accent: #7ec9e0;
+  --accent-light: #ffd166;
+  --cream: #FFF8F0;
+  --text-on-dark: #FFF8F0;
+  --footer-bg: rgba(126, 201, 224, 0.12);
+  --font-display: "Baloo 2", "Fraunces", sans-serif;
+}
+
+.cover {
+  background: linear-gradient(160deg, #ff9fc2 0%, #4a2f55 75%);
+}
+.cover-glow {
+  background: radial-gradient(circle, #ffe066 0%, transparent 65%);
+  opacity: 0.35;
+}
+.cover-title { font-style: normal; font-weight: 800; }
+
+.hero-title { font-weight: 700; }
+.gallery-title { font-weight: 700; }
+
+.message-card {
+  border-radius: 28px;
+  border: 2px dashed rgba(255, 209, 102, 0.5);
+}
+.message-text { font-style: normal; font-weight: 500; }
+
+.gallery-item {
+  border-radius: 20px;
+  background: linear-gradient(160deg, #ff9fc2, #7ec9e0);
+}
+
+.footer-cta { background: var(--footer-bg); }
+
+.btn { border-radius: 16px; }
+.btn-primary { color: #4a2f55; font-weight: 800; }
+
+/* bintang kecil dekoratif di layar pembuka */
+.cover-inner::before {
+  content: "✨";
+  position: absolute;
+  top: -30px;
+  left: 10%;
+  font-size: 20px;
+  animation: twinkle 2.4s ease-in-out infinite;
+}
+.cover-inner::after {
+  content: "✨";
+  position: absolute;
+  bottom: -10px;
+  right: 8%;
+  font-size: 16px;
+  animation: twinkle 3s ease-in-out infinite reverse;
+}
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.1); }
+}

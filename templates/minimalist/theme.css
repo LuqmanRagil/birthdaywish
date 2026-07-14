@@ -1,0 +1,58 @@
+/* =========================================================
+   THEME: MINIMALIST
+   Palet netral krem/taupe, tenang dan bersih, tanpa hiasan
+   berlebih. Aman diedit kalau kamu mau menyesuaikan warna.
+   ========================================================= */
+
+:root {
+  --bg-deep: #C9BFA9;
+  --bg-darker: #EDE6D6;
+  --accent: #9C8B5E;
+  --accent-light: #B9A87C;
+  --cream: #FBF8F1;
+  --text-on-dark: #3A342A;
+  --footer-bg: rgba(156, 139, 94, 0.08);
+}
+
+body.theme-minimalist { background: var(--bg-darker); }
+
+.cover {
+  background: var(--bg-darker);
+}
+.cover-glow { display: none; } /* minimalis: tanpa glow dekoratif */
+.cover-title { color: var(--accent); }
+.cover-eyebrow { color: var(--accent); }
+.cover-hint { color: rgba(58,52,42,0.5); }
+
+.content { background: var(--bg-darker); }
+.hero-text { color: rgba(58,52,42,0.75); }
+
+.message-card {
+  background: #FFFFFF;
+  border-color: rgba(156, 139, 94, 0.25);
+  box-shadow: 0 20px 50px rgba(58,52,42,0.06);
+}
+.message-text { color: var(--text-on-dark); }
+.message-signature { color: var(--accent); }
+
+.gallery-item { background: linear-gradient(160deg, #DCD3BE, var(--accent)); }
+
+.music-section { color: rgba(58,52,42,0.7); }
+
+.footer-cta { background: var(--footer-bg); }
+.footer-cta p { color: rgba(58,52,42,0.6); }
+.footer-note { color: rgba(58,52,42,0.45); }
+
+.btn-primary { color: #FBF8F1; }
+.btn-outline { color: var(--accent); border-color: var(--accent); }
+.btn-outline:hover { background: var(--accent); color: #FBF8F1; }
+
+/* garis tipis dekoratif khas minimalis */
+.hero-section::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: var(--accent);
+  margin: 0 auto 24px;
+}

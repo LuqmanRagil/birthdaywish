@@ -1,0 +1,60 @@
+/* =========================================================
+   THEME: LUXURY
+   Palet hitam + emas, mewah dan berkelas, dengan bingkai
+   ornamen. Aman diedit kalau kamu mau menyesuaikan warna.
+   ========================================================= */
+
+:root {
+  --bg-deep: #1a1508;
+  --bg-darker: #100c05;
+  --accent: #C9A24B;
+  --accent-light: #F0D68A;
+  --cream: #F7F1E6;
+  --text-on-dark: #F7F1E6;
+  --footer-bg: rgba(201, 162, 75, 0.08);
+}
+
+.cover {
+  background: radial-gradient(120% 140% at 50% 10%, #3a2f14, #100c05 75%);
+}
+.cover-glow {
+  background: radial-gradient(circle, #F0D68A 0%, transparent 65%);
+  opacity: 0.2;
+}
+.cover-title {
+  text-shadow: 0 0 30px rgba(240, 214, 138, 0.35);
+}
+
+/* bingkai ornamen sudut di layar pembuka */
+.cover-inner {
+  padding: 50px 40px;
+  position: relative;
+}
+.cover-inner::before,
+.cover-inner::after {
+  content: "";
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  border-top: 1.5px solid var(--accent-light);
+  border-left: 1.5px solid var(--accent-light);
+  opacity: 0.6;
+  top: 0; left: 0;
+}
+.cover-inner::after {
+  top: auto; left: auto; bottom: 0; right: 0;
+  border-top: none; border-left: none;
+  border-bottom: 1.5px solid var(--accent-light);
+  border-right: 1.5px solid var(--accent-light);
+}
+
+.message-card {
+  border: 1px solid rgba(240, 214, 138, 0.4);
+  background: linear-gradient(160deg, rgba(240,214,138,0.05), rgba(0,0,0,0.15));
+}
+
+.gallery-item { background: linear-gradient(160deg, #2b2308, var(--accent)); }
+
+.footer-cta { background: var(--footer-bg); }
+
+.btn-primary { color: #100c05; font-weight: 800; }

@@ -1,0 +1,57 @@
+/* =========================================================
+   THEME: ROMANTIC
+   Palet marun tua + rose gold, hangat dan intim.
+   Aman diedit kalau kamu mau menyesuaikan warna template ini.
+   ========================================================= */
+
+:root {
+  --bg-deep: #7a2e42;
+  --bg-darker: #2B1330;
+  --accent: #C9A24B;
+  --accent-light: #E7C97A;
+  --cream: #F7F1E6;
+  --text-on-dark: #F7F1E6;
+  --cover-bg-gradient: radial-gradient(120% 140% at 50% 10%, #7a2e42, #2B1330 70%);
+  --footer-bg: rgba(122, 46, 66, 0.35);
+}
+
+.cover {
+  background: var(--cover-bg-gradient);
+}
+
+.cover-glow {
+  background: radial-gradient(circle, #E8A7B3 0%, transparent 65%);
+}
+
+.footer-cta {
+  background: var(--footer-bg);
+}
+
+/* dekorasi hati melayang halus di layar pembuka */
+.cover::after {
+  content: "♥";
+  position: absolute;
+  font-size: 22px;
+  color: rgba(232, 167, 179, 0.35);
+  top: 12%;
+  left: 20%;
+  animation: floatHeart 6s ease-in-out infinite;
+}
+.cover::before {
+  content: "♥";
+  position: absolute;
+  font-size: 16px;
+  color: rgba(231, 201, 122, 0.35);
+  top: 70%;
+  right: 18%;
+  animation: floatHeart 7s ease-in-out infinite reverse;
+}
+@keyframes floatHeart {
+  0%, 100% { transform: translateY(0) rotate(-4deg); }
+  50% { transform: translateY(-18px) rotate(4deg); }
+}
+
+.message-card {
+  border-color: rgba(232, 167, 179, 0.4);
+  background: rgba(232, 167, 179, 0.06);
+}

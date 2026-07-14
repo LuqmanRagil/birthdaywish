@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selamat Ulang Tahun</title>
+  <meta name="robots" content="noindex">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../shared/engine.css">
+  <link rel="stylesheet" href="theme.css">
+</head>
+<body class="theme-anime">
+
+  <canvas id="confettiCanvas" class="confetti-canvas"></canvas>
+
+  <!-- ================= LAYAR PEMBUKA ================= -->
+  <section class="cover" id="cover">
+    <div class="cover-glow"></div>
+    <div class="cover-inner">
+      <p class="cover-eyebrow" id="coverEyebrow">Sebuah kejutan kecil untuk</p>
+      <h1 class="cover-title" id="coverTitle">Nama</h1>
+      <button class="btn btn-primary" id="openBtn">Buka Ucapannya 🎁</button>
+      <p class="cover-hint">Dibuat khusus dengan cinta</p>
+    </div>
+  </section>
+
+  <!-- ================= ISI UCAPAN ================= -->
+  <main class="content" id="content" hidden>
+
+    <section class="hero-section">
+      <div class="hero-inner">
+        <p class="reveal-line hero-eyebrow" id="heroEyebrow"></p>
+        <h2 class="reveal-line hero-title" id="heroTitle"></h2>
+        <p class="reveal-line hero-text" id="heroText"></p>
+      </div>
+    </section>
+
+    <section class="message-section">
+      <div class="message-card">
+        <p class="reveal-line message-text" id="messageText"></p>
+        <span class="reveal-line message-signature" id="messageSignature"></span>
+      </div>
+    </section>
+
+    <section class="gallery-section">
+      <p class="gallery-eyebrow">Kenangan Kita</p>
+      <h2 class="gallery-title">Sebuah Galeri Kecil</h2>
+      <div class="gallery-grid" id="galleryGrid"></div>
+    </section>
+
+    <section class="music-section" id="musicSection">
+      <p>🎵 Musik spesial untuk momen ini</p>
+      <button class="btn btn-outline" id="musicBtn">Putar Musik</button>
+      <audio id="bgMusic" loop preload="none"></audio>
+    </section>
+
+    <section class="footer-cta">
+      <h2>Suka dengan template ini?</h2>
+      <p>Website ini dibuat oleh BirthdayWish — pesan juga untuk orang tersayangmu.</p>
+      <button class="btn btn-primary" id="footerCtaBtn">Pesan Template Ini</button>
+      <p class="footer-note">Dibuat dengan ❤️ oleh <a href="https://luqmanragil.github.io/birthdaywish/" target="_blank" rel="noopener">BirthdayWish</a></p>
+    </section>
+
+  </main>
+
+  <script src="config.js"></script>
+  <script src="../shared/engine.js"></script>
+</body>
+</html>
