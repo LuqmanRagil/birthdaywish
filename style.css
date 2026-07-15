@@ -127,21 +127,13 @@ a:focus-visible, button:focus-visible {
   height: 76px;
 }
 .brand { display: flex; align-items: center; gap: 10px; }
-.brand-seal {
-  width: 38px; height: 38px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--gold-light), var(--gold));
-  color: var(--plum-darker);
-  font-family: var(--font-display);
-  font-weight: 700;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 0.9rem;
+.brand-logo {
+  height: 52px;
+  width: auto;
+  display: block;
 }
-.brand-name {
-  font-family: var(--font-display);
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--plum-deep);
+.brand-logo-footer {
+  height: 46px;
 }
 .nav-links { display: flex; align-items: center; gap: 28px; }
 .nav-links a { font-weight: 600; font-size: 0.95rem; color: var(--plum-deep); opacity: 0.85; }
@@ -256,7 +248,7 @@ a:focus-visible, button:focus-visible {
 .strip { background: var(--ink); color: var(--cream); }
 .strip-inner {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   text-align: center;
   padding: 40px 24px;
   gap: 20px;
@@ -408,6 +400,146 @@ a:focus-visible, button:focus-visible {
   .nav-toggle { display: flex; }
   .product-grid { grid-template-columns: 1fr; }
   .hero { padding: 70px 0 100px; }
+}
+
+/* ========================= URGENSI / COUNTDOWN ========================= */
+.urgency-bar {
+  background: var(--plum-deep);
+  color: var(--cream);
+}
+.urgency-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 24px;
+  text-align: center;
+  font-size: 0.88rem;
+}
+.urgency-icon { font-size: 1rem; }
+.urgency-timer {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--gold-light);
+  letter-spacing: 0.05em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ========================= HARGA DISKON ========================= */
+.product-media { position: relative; }
+.discount-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: #C0392B;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 999px;
+  z-index: 2;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+.price-old {
+  text-decoration: line-through;
+  color: rgba(36,18,33,0.4);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-right: 8px;
+}
+.price-new {
+  color: var(--gold);
+  font-weight: 800;
+  font-size: 1.15rem;
+}
+.product-trust {
+  font-size: 0.78rem;
+  color: var(--success);
+  font-weight: 600;
+  margin: -10px 0 16px;
+}
+
+/* ========================= COCOK UNTUK SIAPA ========================= */
+.audience-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+.audience-card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 36px 26px;
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+}
+.audience-icon { font-size: 2.2rem; display: block; margin-bottom: 14px; }
+.audience-card h3 {
+  font-family: var(--font-display);
+  color: var(--plum-deep);
+  margin: 0 0 10px;
+  font-size: 1.15rem;
+}
+.audience-card p { margin: 0; color: rgba(36,18,33,0.65); font-size: 0.92rem; }
+
+/* ========================= ADD-ON ========================= */
+.addon-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  max-width: 780px;
+  margin: 0 auto;
+}
+.addon-card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 26px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: var(--shadow-soft);
+}
+.addon-icon { font-size: 1.8rem; flex-shrink: 0; }
+.addon-body { flex: 1; }
+.addon-body h3 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--plum-deep);
+  margin: 0 0 4px;
+}
+.addon-body p { margin: 0; font-size: 0.85rem; color: rgba(36,18,33,0.6); }
+.addon-price {
+  font-weight: 800;
+  color: var(--gold);
+  white-space: nowrap;
+  font-size: 0.95rem;
+}
+
+/* ========================= FLOATING WHATSAPP ========================= */
+.whatsapp-float {
+  position: fixed;
+  bottom: 26px;
+  right: 26px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.45);
+  z-index: 200;
+  transition: transform 0.25s var(--ease);
+}
+.whatsapp-float:hover { transform: scale(1.08); }
+.whatsapp-float-icon { font-size: 1.7rem; }
+
+@media (max-width: 720px) {
+  .audience-grid { grid-template-columns: 1fr; }
+  .addon-grid { grid-template-columns: 1fr; }
+  .addon-card { flex-direction: column; text-align: center; }
+  .urgency-inner { font-size: 0.8rem; }
+  .whatsapp-float { bottom: 18px; right: 18px; width: 52px; height: 52px; }
 }
 
 /* =========================================================

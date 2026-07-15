@@ -132,6 +132,25 @@ Selamat merayakan momen spesialnya! 💛
 
 ---
 
+## 🔁 Kebijakan Revisi
+
+Website menampilkan **"Revisi gratis sampai sesuai"** — artinya tidak ada batas jumlah
+revisi selama permintaan pembeli masih wajar (typo, ganti foto, ganti sedikit kalimat, dll).
+Kalau pembeli minta perubahan besar (ganti tema/warna total, tambah section baru di luar
+template), itu wajar dianggap request khusus dan boleh dikenai biaya tambahan — komunikasikan
+ini secara baik-baik lewat WhatsApp.
+
+## ➕ Menangani Pesanan dengan Add-on
+
+Ada 2 add-on yang ditawarkan di halaman utama:
+
+| Add-on | Harga | Cara memenuhinya |
+|---|---|---|
+| Custom lagu/musik pilihan | +Rp15.000 | Minta pembeli kirim link lagu (YouTube/Spotify), lalu unduh versi mp3-nya dan taruh di `assets/music/` sesuai nama di `musikFile` pada `config.js` |
+| Tambahan slot galeri foto (maks. +5 foto) | +Rp10.000 | Tambahkan baris foto ekstra di array `galeriFoto` pada `config.js`, dan taruh file fotonya di `assets/images/` |
+
+Total harga yang diminta ke pembeli = harga template + harga add-on yang dipilih.
+
 ## 🚀 Kalau Sudah Banyak Pesanan
 
 Kalau order mulai ramai dan proses manual di atas terasa berat, langkah upgrade

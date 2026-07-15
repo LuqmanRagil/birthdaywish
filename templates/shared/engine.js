@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const footerBtn = document.getElementById("footerCtaBtn");
   if (footerBtn) {
     footerBtn.addEventListener("click", () => {
-      const nomor = CFG.nomorWhatsapp || "6281234567890";
+      const nomor = CFG.nomorWhatsapp || "6285733745044";
       const pesan = CFG.pesanWhatsapp || "Halo, saya ingin membuat website ucapan seperti ini";
       window.open(`https://wa.me/${nomor}?text=${encodeURIComponent(pesan)}`, "_blank");
     });

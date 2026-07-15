@@ -127,12 +127,16 @@ Dan di `assets/icons/`:
 
 ## 📲 Sistem Pemesanan (WhatsApp)
 
-Semua tombol "Beli" / "Pesan Sekarang" akan otomatis membuka WhatsApp dengan pesan siap kirim.
+Semua tombol "Beli" / "Pesan Sekarang", tombol floating WhatsApp, dan `config.js` di tiap
+template **sudah diisi dengan nomor WhatsApp asli kamu** (`6285733745044`). Kalau suatu saat
+nomornya ganti, cari & ganti nomor ini di file-file berikut:
 
-**Ganti nomor WhatsApp kamu** di file `script.js`, cari baris berikut lalu ubah nomornya:
+- `script.js` → variabel `WHATSAPP_NUMBER`
+- `templates/shared/engine.js` → variabel `nomor` (nilai default)
+- `templates/<nama-template>/config.js` (4 file) → field `nomorWhatsapp`
 
 ```javascript
-const WHATSAPP_NUMBER = "6281234567890";
+const WHATSAPP_NUMBER = "6285733745044";
 ```
 
 Gunakan format kode negara tanpa tanda `+` atau angka `0` di depan.

@@ -32,8 +32,7 @@
   <header class="navbar" id="navbar">
     <div class="container navbar-inner">
       <a href="#top" class="brand">
-        <span class="brand-seal">BW</span>
-        <span class="brand-name">BirthdayWish</span>
+        <img src="assets/images/logo-full.png" alt="BirthdayWish" class="brand-logo">
       </a>
       <nav class="nav-links" id="navLinks">
         <a href="#template">Template</a>
@@ -89,10 +88,15 @@
         <strong>&lt; 24 jam</strong>
         <span>Proses pengerjaan</span>
       </div>
-      <div class="strip-item">
-        <strong>1x</strong>
-        <span>Bayar, pakai selamanya</span>
-      </div>
+    </div>
+  </section>
+
+  <!-- ================= URGENSI / KECEPATAN PROSES ================= -->
+  <section class="urgency-bar">
+    <div class="container urgency-inner">
+      <span class="urgency-icon">⚡</span>
+      <span>Pesan sebelum tengah malam, mulai diproses <strong>hari ini juga</strong> — sisa waktu:</span>
+      <span class="urgency-timer" id="urgencyTimer">--:--:--</span>
     </div>
   </section>
 
@@ -110,12 +114,17 @@
 
         <article class="product-card">
           <div class="product-media product-romantic">
+            <span class="discount-badge">-35%</span>
             <img src="assets/images/template-romantic.svg" alt="Preview Template Birthday Romantic" loading="lazy">
           </div>
           <div class="product-body">
             <h3>Birthday Romantic</h3>
             <p class="product-tag">Untuk pasangan tercinta</p>
-            <p class="product-price">Rp55.000</p>
+            <p class="product-price">
+              <span class="price-old">Rp85.000</span>
+              <span class="price-new">Rp55.000</span>
+            </p>
+            <p class="product-trust">✔ Revisi gratis sampai sesuai</p>
             <div class="product-actions">
               <a href="templates/romantic/index.html" class="btn btn-small btn-outline">Demo</a>
               <button class="btn btn-small btn-primary btn-buy" data-template="Birthday Romantic (Rp55.000)">Beli</button>
@@ -125,12 +134,17 @@
 
         <article class="product-card">
           <div class="product-media product-minimalist">
+            <span class="discount-badge">-40%</span>
             <img src="assets/images/template-minimalist.svg" alt="Preview Template Birthday Minimalist" loading="lazy">
           </div>
           <div class="product-body">
             <h3>Birthday Minimalist</h3>
             <p class="product-tag">Simpel, bersih, elegan</p>
-            <p class="product-price">Rp45.000</p>
+            <p class="product-price">
+              <span class="price-old">Rp75.000</span>
+              <span class="price-new">Rp45.000</span>
+            </p>
+            <p class="product-trust">✔ Revisi gratis sampai sesuai</p>
             <div class="product-actions">
               <a href="templates/minimalist/index.html" class="btn btn-small btn-outline">Demo</a>
               <button class="btn btn-small btn-primary btn-buy" data-template="Birthday Minimalist (Rp45.000)">Beli</button>
@@ -140,12 +154,17 @@
 
         <article class="product-card">
           <div class="product-media product-luxury">
+            <span class="discount-badge">-40%</span>
             <img src="assets/images/template-luxury.svg" alt="Preview Template Birthday Luxury" loading="lazy">
           </div>
           <div class="product-body">
             <h3>Birthday Luxury</h3>
             <p class="product-tag">Mewah dan berkelas</p>
-            <p class="product-price">Rp75.000</p>
+            <p class="product-price">
+              <span class="price-old">Rp125.000</span>
+              <span class="price-new">Rp75.000</span>
+            </p>
+            <p class="product-trust">✔ Revisi gratis sampai sesuai</p>
             <div class="product-actions">
               <a href="templates/luxury/index.html" class="btn btn-small btn-outline">Demo</a>
               <button class="btn btn-small btn-primary btn-buy" data-template="Birthday Luxury (Rp75.000)">Beli</button>
@@ -155,12 +174,17 @@
 
         <article class="product-card">
           <div class="product-media product-anime">
+            <span class="discount-badge">-37%</span>
             <img src="assets/images/template-anime.svg" alt="Preview Template Birthday Anime Style" loading="lazy">
           </div>
           <div class="product-body">
             <h3>Birthday Anime Style</h3>
             <p class="product-tag">Ceria dan penuh warna</p>
-            <p class="product-price">Rp50.000</p>
+            <p class="product-price">
+              <span class="price-old">Rp80.000</span>
+              <span class="price-new">Rp50.000</span>
+            </p>
+            <p class="product-trust">✔ Revisi gratis sampai sesuai</p>
             <div class="product-actions">
               <a href="templates/anime/index.html" class="btn btn-small btn-outline">Demo</a>
               <button class="btn btn-small btn-primary btn-buy" data-template="Birthday Anime Style (Rp50.000)">Beli</button>
@@ -172,8 +196,37 @@
     </div>
   </section>
 
+  <!-- ================= COCOK UNTUK SIAPA SAJA ================= -->
+  <section class="section section-alt" id="untuk-siapa">
+    <div class="container">
+      <p class="eyebrow center">Untuk Siapa</p>
+      <h2 class="section-title center">Cocok Untuk Momen Apa Saja</h2>
+      <p class="section-desc center">
+        Satu template, banyak cerita — sesuaikan pesan dan gayanya untuk orang-orang terdekatmu.
+      </p>
+
+      <div class="audience-grid">
+        <div class="audience-card">
+          <span class="audience-icon">💑</span>
+          <h3>Pasangan</h3>
+          <p>Kejutkan kekasih dengan ucapan penuh cinta yang tak akan mereka lupakan.</p>
+        </div>
+        <div class="audience-card">
+          <span class="audience-icon">👨‍👩‍👧</span>
+          <h3>Keluarga / Orang Tua</h3>
+          <p>Ungkapkan rasa terima kasih dan sayang untuk orang tua atau anggota keluarga tercinta.</p>
+        </div>
+        <div class="audience-card">
+          <span class="audience-icon">🤝</span>
+          <h3>Sahabat</h3>
+          <p>Rayakan persahabatan dengan kejutan digital yang personal dan berkesan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ================= CARA KERJA ================= -->
-  <section class="section section-alt" id="cara-kerja">
+  <section class="section" id="cara-kerja">
     <div class="container">
       <p class="eyebrow center">Cara Kerja</p>
       <h2 class="section-title center">Tiga Langkah Menuju Ucapan Spesial</h2>
@@ -198,11 +251,41 @@
     </div>
   </section>
 
+  <!-- ================= TAMBAHAN / ADD-ON ================= -->
+  <section class="section section-alt" id="tambahan">
+    <div class="container">
+      <p class="eyebrow center">Opsional</p>
+      <h2 class="section-title center">Ingin Lebih Lengkap? Ada Tambahannya</h2>
+      <p class="section-desc center">
+        Sesuaikan pesanan kamu dengan tambahan berikut — cukup sebutkan saat chat WhatsApp.
+      </p>
+
+      <div class="addon-grid">
+        <div class="addon-card">
+          <span class="addon-icon">🎵</span>
+          <div class="addon-body">
+            <h3>Custom Lagu / Musik Pilihan</h3>
+            <p>Ganti musik latar dengan lagu favorit orang yang berulang tahun.</p>
+          </div>
+          <span class="addon-price">+Rp15.000</span>
+        </div>
+        <div class="addon-card">
+          <span class="addon-icon">🖼️</span>
+          <div class="addon-body">
+            <h3>Tambahan Slot Galeri Foto</h3>
+            <p>Tambah hingga 5 foto ekstra di galeri kenangan (di luar 4 foto standar).</p>
+          </div>
+          <span class="addon-price">+Rp10.000</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ================= CTA / KONTAK ================= -->
   <section class="cta" id="kontak">
     <div class="container cta-inner">
       <h2>Siap membuat kejutan ulang tahun yang berkesan?</h2>
-      <p>Chat kami sekarang di WhatsApp, ceritakan orang yang ingin kamu buat terkejut.</p>
+      <p>Chat kami sekarang di WhatsApp, ceritakan orang yang ingin kamu buat terkejut. Revisi gratis sampai kamu benar-benar puas.</p>
       <button class="btn btn-primary btn-large btn-buy" data-template="">Pesan Sekarang via WhatsApp</button>
     </div>
   </section>
@@ -211,12 +294,16 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="brand">
-        <span class="brand-seal">BW</span>
-        <span class="brand-name">BirthdayWish</span>
+        <img src="assets/images/logo-full.png" alt="BirthdayWish" class="brand-logo brand-logo-footer">
       </div>
       <p>&copy; <span id="year"></span> BirthdayWish. Dibuat dengan sepenuh hati untuk setiap perayaan.</p>
     </div>
   </footer>
+
+  <!-- ================= FLOATING WHATSAPP BUTTON ================= -->
+  <a href="#" class="whatsapp-float" id="whatsappFloat" aria-label="Chat via WhatsApp" target="_blank" rel="noopener">
+    <span class="whatsapp-float-icon">💬</span>
+  </a>
 
   <script src="script.js"></script>
 </body>

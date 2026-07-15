@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* ---------- Tombol pesan via WhatsApp ---------- */
   // Ganti nomor di bawah ini dengan nomor WhatsApp bisnis kamu
-  // Format: kode negara tanpa "+" atau "0" di depan, contoh Indonesia: 6281234567890
+  // Format: kode negara tanpa "+" atau "0" di depan, contoh Indonesia: 6285733745044
   const WHATSAPP_NUMBER = "6285733745044";
 
   const buyButtons = document.querySelectorAll(".btn-buy");
@@ -67,6 +67,34 @@ document.addEventListener("DOMContentLoaded", () => {
       window.open(url, "_blank");
     });
   });
+
+  /* ---------- Tombol floating WhatsApp (pertanyaan umum) ---------- */
+  const whatsappFloat = document.getElementById("whatsappFloat");
+  if (whatsappFloat) {
+    const pesanFloat = "Halo, saya mau tanya-tanya soal BirthdayWish";
+    whatsappFloat.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(pesanFloat)}`;
+  }
+
+  /* ---------- Countdown menuju tengah malam (urgensi proses hari ini) ---------- */
+  const urgencyTimer = document.getElementById("urgencyTimer");
+  if (urgencyTimer) {
+    function updateCountdown() {
+      const now = new Date();
+      const midnight = new Date(now);
+      midnight.setHours(24, 0, 0, 0); // tengah malam berikutnya
+
+      const diff = midnight - now;
+      const hours = Math.floor(diff / (1000 * 60 * 60));
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      const pad = (n) => String(n).padStart(2, "0");
+      urgencyTimer.textContent = `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  }
 
   /* =========================================================
      BAGIAN KHUSUS HALAMAN DEMO (demo.html)
