@@ -124,16 +124,16 @@ a:focus-visible, button:focus-visible {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 76px;
+  height: 88px;
 }
 .brand { display: flex; align-items: center; gap: 10px; }
 .brand-logo {
-  height: 52px;
+  height: 68px;
   width: auto;
   display: block;
 }
 .brand-logo-footer {
-  height: 46px;
+  height: 58px;
 }
 .nav-links { display: flex; align-items: center; gap: 28px; }
 .nav-links a { font-weight: 600; font-size: 0.95rem; color: var(--plum-deep); opacity: 0.85; }
@@ -386,7 +386,7 @@ a:focus-visible, button:focus-visible {
 @media (max-width: 720px) {
   .nav-links {
     position: fixed;
-    top: 76px; left: 0; right: 0;
+    top: 88px; left: 0; right: 0;
     background: var(--cream);
     flex-direction: column;
     align-items: flex-start;
@@ -400,30 +400,6 @@ a:focus-visible, button:focus-visible {
   .nav-toggle { display: flex; }
   .product-grid { grid-template-columns: 1fr; }
   .hero { padding: 70px 0 100px; }
-}
-
-/* ========================= URGENSI / COUNTDOWN ========================= */
-.urgency-bar {
-  background: var(--plum-deep);
-  color: var(--cream);
-}
-.urgency-inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 8px;
-  padding: 12px 24px;
-  text-align: center;
-  font-size: 0.88rem;
-}
-.urgency-icon { font-size: 1rem; }
-.urgency-timer {
-  font-family: var(--font-display);
-  font-weight: 600;
-  color: var(--gold-light);
-  letter-spacing: 0.05em;
-  font-variant-numeric: tabular-nums;
 }
 
 /* ========================= HARGA DISKON ========================= */
@@ -538,7 +514,6 @@ a:focus-visible, button:focus-visible {
   .audience-grid { grid-template-columns: 1fr; }
   .addon-grid { grid-template-columns: 1fr; }
   .addon-card { flex-direction: column; text-align: center; }
-  .urgency-inner { font-size: 0.8rem; }
   .whatsapp-float { bottom: 18px; right: 18px; width: 52px; height: 52px; }
 }
 

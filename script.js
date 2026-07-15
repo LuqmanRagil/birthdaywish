@@ -75,27 +75,6 @@ document.addEventListener("DOMContentLoaded", () => {
     whatsappFloat.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(pesanFloat)}`;
   }
 
-  /* ---------- Countdown menuju tengah malam (urgensi proses hari ini) ---------- */
-  const urgencyTimer = document.getElementById("urgencyTimer");
-  if (urgencyTimer) {
-    function updateCountdown() {
-      const now = new Date();
-      const midnight = new Date(now);
-      midnight.setHours(24, 0, 0, 0); // tengah malam berikutnya
-
-      const diff = midnight - now;
-      const hours = Math.floor(diff / (1000 * 60 * 60));
-      const minutes = Math.floor((diff / (1000 * 60)) % 60);
-      const seconds = Math.floor((diff / 1000) % 60);
-
-      const pad = (n) => String(n).padStart(2, "0");
-      urgencyTimer.textContent = `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
-    }
-
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-  }
-
   /* =========================================================
      BAGIAN KHUSUS HALAMAN DEMO (demo.html)
      Kode di bawah ini otomatis tidak berjalan kalau elemennya
