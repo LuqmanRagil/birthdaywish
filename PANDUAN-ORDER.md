@@ -34,6 +34,15 @@ perlu menyentuh HTML/CSS/JS lain sama sekali untuk memenuhi pesanan biasa.
 
 ---
 
+> 📌 **Khusus template Romantic:** template ini punya struktur yang lebih lengkap
+> (10 bagian: opening, hero, love letter, timeline, galeri, alasan cinta, doa,
+> surprise, music player, closing) dan **tidak** memakai mesin `shared/` —
+> ia berdiri sendiri dengan `style.css` & `script.js` miliknya sendiri di
+> dalam foldernya. Field di `config.js`-nya juga jauh lebih banyak, tapi
+> prinsipnya sama: satu-satunya file yang perlu diedit tiap pesanan.
+> Template Minimalist, Luxury, dan Anime Style masih memakai struktur
+> sederhana seperti sebelumnya.
+
 ## 🔄 Alur Lengkap Memproses 1 Pesanan
 
 ### 1. Terima detail dari pembeli via WhatsApp
