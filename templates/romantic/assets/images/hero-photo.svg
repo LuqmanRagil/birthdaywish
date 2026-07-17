@@ -1,0 +1,33 @@
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="heroBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7a2e42"/>
+      <stop offset="100%" stop-color="#2B1330"/>
+    </linearGradient>
+    <clipPath id="heartClip">
+      <path d="M250 430 C 60 300 30 180 120 110 C 180 65 240 90 250 150 C 260 90 320 65 380 110 C 470 180 440 300 250 430 Z"/>
+    </clipPath>
+  </defs>
+
+  <circle cx="250" cy="250" r="240" fill="url(#heroBg)"/>
+
+  <g clip-path="url(#heartClip)">
+    <rect x="0" y="0" width="500" height="500" fill="#4a1c2c"/>
+    <!-- siluet berdua duduk berdekatan -->
+    <g transform="translate(250,340)">
+      <circle cx="-45" cy="-170" r="30" fill="#E7C97A"/>
+      <path d="M-45 -140 C -80 -110, -85 -30, -75 40 L -10 40 C -12 -30, -18 -110, -45 -140 Z" fill="#E7C97A"/>
+      <circle cx="48" cy="-178" r="28" fill="#E8A7B3"/>
+      <path d="M48 -150 C 78 -122, 84 -40, 74 40 L 12 40 C 14 -40, 20 -122, 48 -150 Z" fill="#E8A7B3"/>
+    </g>
+  </g>
+
+  <path d="M250 430 C 60 300 30 180 120 110 C 180 65 240 90 250 150 C 260 90 320 65 380 110 C 470 180 440 300 250 430 Z"
+        fill="none" stroke="#E7C97A" stroke-width="4"/>
+
+  <g fill="#F7F1E6" opacity="0.8">
+    <circle cx="130" cy="90" r="2.5"/>
+    <circle cx="370" cy="100" r="2"/>
+    <circle cx="250" cy="60" r="2.2"/>
+  </g>
+</svg>

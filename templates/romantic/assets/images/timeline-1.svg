@@ -1,0 +1,26 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="t1Bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EDE0C8"/>
+      <stop offset="100%" stop-color="#C9A24B"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#t1Bg)"/>
+
+  <!-- figur kiri -->
+  <g transform="translate(130,260)">
+    <circle cx="0" cy="-100" r="20" fill="#3A1D42"/>
+    <path d="M0 -80 C -22 -60, -26 -10, -20 40 L 20 40 C 22 -10, 22 -60, 0 -80 Z" fill="#3A1D42"/>
+  </g>
+  <!-- figur kanan -->
+  <g transform="translate(270,270)">
+    <circle cx="0" cy="-95" r="18" fill="#7a2e42"/>
+    <path d="M0 -77 C -20 -58, -24 -8, -18 40 L 18 40 C 20 -8, 20 -58, 0 -77 Z" fill="#7a2e42"/>
+  </g>
+
+  <!-- kilau tanda pertemuan -->
+  <g fill="#F7F1E6" opacity="0.9">
+    <path d="M200 140 l5 12 12 2 -9 9 2 12 -10 -6 -10 6 2 -12 -9 -9 12 -2 z"/>
+  </g>
+  <line x1="150" y1="260" x2="250" y2="270" stroke="#F7F1E6" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.6"/>
+</svg>

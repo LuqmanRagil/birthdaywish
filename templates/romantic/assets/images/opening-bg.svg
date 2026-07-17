@@ -1,0 +1,46 @@
+<svg viewBox="0 0 800 1200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="openBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2B1330"/>
+      <stop offset="55%" stop-color="#4a1c2c"/>
+      <stop offset="100%" stop-color="#1a0b1d"/>
+    </linearGradient>
+    <radialGradient id="openGlow" cx="50%" cy="35%" r="55%">
+      <stop offset="0%" stop-color="#E8A7B3" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#E8A7B3" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="1200" fill="url(#openBg)"/>
+  <rect width="800" height="1200" fill="url(#openGlow)"/>
+
+  <!-- bintang -->
+  <g fill="#F7F1E6" opacity="0.7">
+    <circle cx="120" cy="140" r="2.5"/>
+    <circle cx="680" cy="180" r="2"/>
+    <circle cx="220" cy="260" r="1.8"/>
+    <circle cx="600" cy="100" r="2.2"/>
+    <circle cx="90" cy="320" r="1.6"/>
+    <circle cx="720" cy="300" r="2"/>
+    <circle cx="400" cy="90" r="2"/>
+  </g>
+
+  <!-- bulan sabit kecil -->
+  <path d="M660 150 A 30 30 0 1 0 660 210 A 22 22 0 1 1 660 150 Z" fill="#E7C97A" opacity="0.8"/>
+
+  <!-- siluet sepasang kekasih berpegangan tangan -->
+  <g transform="translate(400,880)" fill="none" stroke="#E7C97A" stroke-width="3" opacity="0.9">
+    <!-- figur kiri -->
+    <circle cx="-70" cy="-260" r="34" fill="#E7C97A" opacity="0.9"/>
+    <path d="M-70 -226 C -110 -190, -118 -100, -108 0 L -32 0 C -34 -100, -40 -190, -70 -226 Z" fill="#E7C97A" opacity="0.85"/>
+    <!-- figur kanan -->
+    <circle cx="70" cy="-270" r="32" fill="#E8A7B3" opacity="0.9"/>
+    <path d="M70 -238 C 105 -205, 112 -110, 100 0 L 30 0 C 32 -110, 38 -205, 70 -238 Z" fill="#E8A7B3" opacity="0.85"/>
+    <!-- tangan bergandengan -->
+    <path d="M-32 -60 Q 0 -30 30 -60" stroke="#F7F1E6" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.7"/>
+  </g>
+
+  <!-- hati kecil melayang -->
+  <g fill="#E8A7B3" opacity="0.5">
+    <path d="M400 700 c -10 -14 -34 -14 -34 6 c 0 18 34 34 34 34 c 0 0 34 -16 34 -34 c 0 -20 -24 -20 -34 -6 Z"/>
+  </g>
+</svg>

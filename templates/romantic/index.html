@@ -11,64 +11,114 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="../shared/engine.css">
-  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="theme-romantic">
+<body>
 
-  <canvas id="confettiCanvas" class="confetti-canvas"></canvas>
+  <canvas id="fxCanvas" class="fx-canvas"></canvas>
 
-  <!-- ================= LAYAR PEMBUKA ================= -->
-  <section class="cover" id="cover">
-    <div class="cover-glow"></div>
-    <div class="cover-inner">
-      <p class="cover-eyebrow" id="coverEyebrow">Sebuah kejutan kecil untuk</p>
-      <h1 class="cover-title" id="coverTitle">Nama</h1>
-      <button class="btn btn-primary" id="openBtn">Buka Ucapannya 🎁</button>
-      <p class="cover-hint">Dibuat khusus dengan cinta</p>
+  <!-- ================= 1. OPENING / HALAMAN PEMBUKA ================= -->
+  <section class="opening" id="opening">
+    <img src="assets/images-contoh/romantic-illustration.svg" alt="" class="opening-bg" id="openingBg">
+    <div class="opening-overlay"></div>
+    <div class="opening-inner">
+      <p class="opening-eyebrow">Untuk</p>
+      <h1 class="opening-name" id="openingName">Nama</h1>
+      <p class="opening-line" id="openingLine1"></p>
+      <p class="opening-line opening-line-2" id="openingLine2"></p>
+      <button class="btn btn-primary" id="openBtn">Buka Kejutan ✨</button>
     </div>
   </section>
 
-  <!-- ================= ISI UCAPAN ================= -->
+  <!-- ================= KONTEN UTAMA (tersembunyi sampai dibuka) ================= -->
   <main class="content" id="content" hidden>
 
-    <section class="hero-section">
-      <div class="hero-inner">
-        <p class="reveal-line hero-eyebrow" id="heroEyebrow"></p>
-        <h2 class="reveal-line hero-title" id="heroTitle"></h2>
-        <p class="reveal-line hero-text" id="heroText"></p>
+    <!-- ================= 2. HERO SECTION ================= -->
+    <section class="hero-r">
+      <canvas class="petal-canvas" id="petalCanvas"></canvas>
+      <div class="hero-r-glow"></div>
+      <img src="assets/images-contoh/romantic-illustration.svg" alt="" class="hero-r-photo" id="heroPhoto">
+      <div class="hero-r-inner">
+        <h2 class="reveal-line hero-r-title" id="heroTitle">Happy Birthday</h2>
+        <p class="reveal-line hero-r-sub" id="heroSub"></p>
       </div>
     </section>
 
-    <section class="message-section">
-      <div class="message-card">
-        <p class="reveal-line message-text" id="messageText"></p>
-        <span class="reveal-line message-signature" id="messageSignature"></span>
+    <!-- ================= 3. LOVE LETTER ================= -->
+    <section class="letter-section">
+      <div class="letter-paper">
+        <p class="letter-opening" id="letterOpening">Dear,</p>
+        <div class="letter-body" id="letterBody"></div>
+        <button class="btn btn-outline letter-btn" id="letterNextBtn">Lanjut Membaca ↓</button>
       </div>
     </section>
 
-    <section class="gallery-section">
-      <p class="gallery-eyebrow">Kenangan Kita</p>
-      <h2 class="gallery-title">Sebuah Galeri Kecil</h2>
-      <div class="gallery-grid" id="galleryGrid"></div>
+    <!-- ================= 4. TIMELINE KENANGAN ================= -->
+    <section class="timeline-section" id="timelineSection">
+      <p class="eyebrow-r center">Perjalanan Kita</p>
+      <h2 class="title-r center">Timeline Kenangan</h2>
+      <div class="timeline-list" id="timelineList"></div>
     </section>
 
-    <section class="music-section" id="musicSection">
-      <p>🎵 Musik spesial untuk momen ini</p>
-      <button class="btn btn-outline" id="musicBtn">Putar Musik</button>
-      <audio id="bgMusic" loop preload="none"></audio>
+    <!-- ================= 5. GALERI FOTO ================= -->
+    <section class="gallery-r-section">
+      <p class="eyebrow-r center">Album Digital</p>
+      <h2 class="title-r center">Galeri Foto Kenangan</h2>
+      <div class="polaroid-grid" id="polaroidGrid"></div>
     </section>
 
-    <section class="footer-cta">
-      <h2>Suka dengan template ini?</h2>
-      <p>Website ini dibuat oleh BirthdayWish — pesan juga untuk orang tersayangmu.</p>
-      <button class="btn btn-primary" id="footerCtaBtn">Pesan Template Ini</button>
-      <p class="footer-note">Dibuat dengan ❤️ oleh <a href="https://luqmanragil.github.io/birthdaywish/" target="_blank" rel="noopener">BirthdayWish</a></p>
+    <!-- ================= 6. REASONS WHY I LOVE YOU ================= -->
+    <section class="reasons-section">
+      <p class="eyebrow-r center">Alasan</p>
+      <h2 class="title-r center" id="reasonsTitle">Alasan Aku Bersyukur Memilikimu</h2>
+      <ul class="reasons-list" id="reasonsList"></ul>
+    </section>
+
+    <!-- ================= 7. BIRTHDAY WISHES / DOA ================= -->
+    <section class="wishes-section">
+      <div class="wishes-card">
+        <span class="wishes-icon">🤍</span>
+        <p class="wishes-text" id="wishesText"></p>
+      </div>
+    </section>
+
+    <!-- ================= 8. SURPRISE SECTION ================= -->
+    <section class="surprise-section">
+      <p class="eyebrow-r center">Satu Lagi</p>
+      <h2 class="title-r center">Ada Sebuah Kejutan</h2>
+      <button class="btn btn-primary" id="secretBtn">Ada satu pesan rahasia untukmu...</button>
+      <div class="secret-message" id="secretMessage" hidden>
+        <p id="secretMessageText"></p>
+      </div>
+    </section>
+
+    <!-- ================= 10. CLOSING SECTION ================= -->
+    <section class="closing-section">
+      <div class="closing-inner">
+        <p class="reveal-line closing-text" id="closingText"></p>
+        <p class="reveal-line closing-subtext" id="closingSubtext"></p>
+        <p class="reveal-line closing-sender" id="closingSender"></p>
+        <p class="reveal-line closing-date" id="closingDate"></p>
+
+        <button class="btn btn-outline closing-cta" id="footerCtaBtn">Pesan Template Ini</button>
+        <p class="footer-note-r">Dibuat dengan ❤️ oleh <a href="https://luqmanragil.github.io/birthdaywish/" target="_blank" rel="noopener">BirthdayWish</a></p>
+      </div>
     </section>
 
   </main>
 
+  <!-- ================= 9. MUSIC PLAYER (mengambang) ================= -->
+  <div class="music-player" id="musicPlayer" hidden>
+    <img src="assets/images-contoh/music-cover-placeholder.svg" alt="" class="music-player-cover" id="musicCover">
+    <div class="music-player-info">
+      <span class="music-player-title" id="musicTitle">Judul Lagu</span>
+      <span class="music-player-artist" id="musicArtist">Nama Artis</span>
+    </div>
+    <button class="music-player-btn" id="musicToggleBtn" aria-label="Putar/Jeda Musik">▶</button>
+    <audio id="bgMusic" loop preload="none"></audio>
+  </div>
+
   <script src="config.js"></script>
-  <script src="../shared/engine.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

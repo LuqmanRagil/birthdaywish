@@ -1,0 +1,22 @@
+<svg viewBox="0 0 320 380" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="polaroidInner" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f3d6dc"/>
+      <stop offset="100%" stop-color="#d9b7c9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- bingkai polaroid -->
+  <rect x="0" y="0" width="320" height="380" rx="6" fill="#FFFFFF"/>
+  <rect x="16" y="16" width="288" height="288" rx="2" fill="url(#polaroidInner)"/>
+
+  <!-- siluet sederhana di dalam foto -->
+  <g transform="translate(160,150)" fill="#7a2e42" opacity="0.55">
+    <path d="M-40 60 Q -55 10 -20 -10 Q 0 -22 20 -10 Q 55 10 40 60 Z"/>
+    <circle cx="-16" cy="-30" r="14"/>
+    <circle cx="16" cy="-30" r="14"/>
+  </g>
+  <path d="M160 118 c -8 -14 -30 -14 -30 6 c 0 16 30 34 30 34 c 0 0 30 -18 30 -34 c 0 -20 -22 -20 -30 -6 Z" fill="#E7C97A" opacity="0.9"/>
+
+  <text x="160" y="345" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="20" fill="#7a2e42">Foto Kenangan</text>
+</svg>

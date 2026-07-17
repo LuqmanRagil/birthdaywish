@@ -1,0 +1,22 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="t2Bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7a2e42"/>
+      <stop offset="100%" stop-color="#2B1330"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#t2Bg)"/>
+
+  <g transform="translate(180,260)">
+    <circle cx="-20" cy="-100" r="20" fill="#E7C97A"/>
+    <path d="M-20 -80 C -42 -60, -46 -10, -40 40 L 0 40 C 2 -10, 2 -60, -20 -80 Z" fill="#E7C97A"/>
+    <circle cx="35" cy="-105" r="18" fill="#E8A7B3"/>
+    <path d="M35 -87 C 15 -68, 11 -18, 17 40 L 55 40 C 57 -18, 57 -68, 35 -87 Z" fill="#E8A7B3"/>
+  </g>
+
+  <g fill="#F7F1E6" opacity="0.85">
+    <path d="M200 130 c -8 -11 -27 -11 -27 5 c 0 14 27 27 27 27 c 0 0 27 -13 27 -27 c 0 -16 -19 -16 -27 -5 Z"/>
+    <path d="M260 180 c -5 -7 -17 -7 -17 3 c 0 9 17 17 17 17 c 0 0 17 -8 17 -17 c 0 -10 -12 -10 -17 -3 Z"/>
+    <path d="M140 190 c -4 -6 -14 -6 -14 2 c 0 8 14 14 14 14 c 0 0 14 -6 14 -14 c 0 -8 -10 -8 -14 -2 Z"/>
+  </g>
+</svg>

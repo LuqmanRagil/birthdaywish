@@ -1,0 +1,54 @@
+<svg viewBox="0 0 800 1000" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3b1220"/>
+      <stop offset="55%" stop-color="#7a2e42"/>
+      <stop offset="100%" stop-color="#2B1330"/>
+    </linearGradient>
+    <radialGradient id="moonGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F7F1E6" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#F7F1E6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="1000" fill="url(#skyGrad)"/>
+
+  <!-- bulan -->
+  <circle cx="600" cy="180" r="90" fill="url(#moonGlow)"/>
+  <circle cx="600" cy="180" r="46" fill="#F7F1E6" opacity="0.9"/>
+
+  <!-- bintang -->
+  <g fill="#F7F1E6" opacity="0.8">
+    <circle cx="120" cy="120" r="2.5"/>
+    <circle cx="220" cy="220" r="2"/>
+    <circle cx="80" cy="300" r="1.8"/>
+    <circle cx="340" cy="90" r="2"/>
+    <circle cx="450" cy="160" r="1.5"/>
+    <circle cx="700" cy="330" r="2"/>
+    <circle cx="180" cy="420" r="1.6"/>
+    <circle cx="500" cy="60" r="2"/>
+  </g>
+
+  <!-- bukit -->
+  <path d="M0 720 Q 200 650 400 700 T 800 680 V1000 H0 Z" fill="#241221" opacity="0.9"/>
+  <path d="M0 800 Q 250 750 400 790 T 800 760 V1000 H0 Z" fill="#190B1D"/>
+
+  <!-- siluet sepasang kekasih duduk berdampingan -->
+  <g transform="translate(400,760)" fill="#0f0710">
+    <path d="M-70 40 Q -80 -10 -40 -30 Q -20 -45 0 -30 Q 5 -20 0 0 Q 10 20 -10 40 Z"/>
+    <path d="M70 40 Q 80 -10 40 -30 Q 20 -45 0 -30 Q -5 -20 0 0 Q -10 20 10 40 Z"/>
+    <circle cx="-38" cy="-42" r="14"/>
+    <circle cx="38" cy="-42" r="14"/>
+  </g>
+
+  <!-- hati kecil melayang -->
+  <g fill="#E8A7B3" opacity="0.85">
+    <path d="M400 640 c -6 -10 -22 -10 -22 4 c 0 12 22 26 22 26 c 0 0 22 -14 22 -26 c 0 -14 -16 -14 -22 -4 Z"/>
+  </g>
+  <g fill="#E7C97A" opacity="0.6">
+    <path d="M330 600 c -4 -7 -15 -7 -15 3 c 0 8 15 17 15 17 c 0 0 15 -9 15 -17 c 0 -10 -11 -10 -15 -3 Z"/>
+    <path d="M470 590 c -3 -6 -12 -6 -12 2 c 0 7 12 14 12 14 c 0 0 12 -7 12 -14 c 0 -8 -9 -8 -12 -2 Z"/>
+  </g>
+
+  <text x="400" y="920" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="22" fill="#F7F1E6" opacity="0.55">Contoh — ganti dengan foto asli pembeli</text>
+</svg>

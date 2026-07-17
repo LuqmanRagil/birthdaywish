@@ -1,64 +1,117 @@
 /* =========================================================
-   CONFIG.JS — TEMPLATE: BIRTHDAY ROMANTIC
+   CONFIG.JS — TEMPLATE: BIRTHDAY ROMANTIC (Edisi Lengkap)
    =========================================================
    INI SATU-SATUNYA FILE YANG PERLU DIEDIT SETIAP ADA PESANAN.
-   Jangan edit index.html, theme.css, atau file di folder shared/.
+   Jangan edit index.html, style.css, atau script.js.
 
-   Cara pakai:
-   1. Ganti nilai di dalam tanda kutip " " sesuai data pembeli.
-   2. Taruh foto pembeli di folder assets/images/ (bisa lebih
-      atau kurang dari 4 foto, tinggal tambah/kurangi baris
-      di galeriFoto).
-   3. Taruh file musik (mp3) di folder assets/music/ kalau
-      pembeli minta musik, lalu isi musikFile di bawah.
-   4. Simpan file ini, lalu upload seluruh folder template
-      ini ke hosting (lihat PANDUAN-ORDER.md).
+   Cara pakai singkat:
+   1. Ganti semua teks di dalam tanda kutip " " sesuai pesanan pembeli.
+   2. Ganti path foto (yang sekarang menunjuk ke folder
+      "assets/images-contoh/") dengan foto asli pembeli yang
+      sudah kamu taruh di folder "assets/images/".
+   3. Kalau pembeli kirim lagu, taruh file mp3 di "assets/music/"
+      dan sesuaikan musikFile, musikJudul, musikArtis, musikCover.
+   4. Simpan file ini, lalu upload seluruh folder ke hosting
+      (lihat PANDUAN-ORDER.md di folder utama BirthdayWish).
    ========================================================= */
 
 window.CONFIG = {
 
-  // Nama orang yang berulang tahun (tampil besar di layar pembuka)
-  namaPenerima: "Sarah",
+  /* ============ 1. OPENING / HALAMAN PEMBUKA ============ */
+  namaPenerima: "Aisyah",
+  fotoPembuka: "assets/images-contoh/romantic-illustration.svg",
+  kalimatPembuka1: "Untuk seseorang yang paling istimewa...",
+  kalimatPembuka2: "Klik untuk membuka hadiah kecil dariku ❤️",
+  tombolPembuka: "Buka Kejutan ✨",
 
-  // Kalimat kecil di atas nama, di layar pembuka
-  labelAtas: "Sebuah kejutan kecil untuk",
+  /* ============ 2. HERO SECTION (UCAPAN UTAMA) ============ */
+  fotoHero: "assets/images-contoh/romantic-illustration.svg",
+  // Kosongkan umur jadi "" kalau tidak ingin menampilkan umur
+  umur: "18",
+  judulHero: "Happy Birthday",
+  subjudulHero: "Years of Beautiful Journey",
 
-  // Kalimat kecil di atas judul utama (setelah dibuka)
-  eyebrowHero: "25 Tahun yang Penuh Cerita",
-
-  // Judul utama (nama akan otomatis ditambahkan setelah ini)
-  judulHero: "Selamat Ulang Tahun,",
-
-  // Paragraf pembuka setelah judul
-  teksHero: "Setiap tahun yang kamu lewati adalah bukti betapa berharganya kamu. Semoga tahun ini membawa lebih banyak tawa, kehangatan, dan cinta yang tulus.",
-
-  // Pesan / surat ucapan utama (boleh panjang, tampil di dalam kartu)
-  pesanUcapan: "\"Terima kasih sudah jadi kamu yang selalu hangat dan penuh cinta. Semoga hari ini terasa seistimewa dirimu. Selamat merayakan hidup — aku bersyukur bisa merayakannya bersamamu.\"",
-
-  // Nama pengirim ucapan (tampil di bawah pesan)
-  pengirim: "— Dari orang yang selalu menyayangimu",
-
-  // Daftar foto galeri kenangan. Tambah/kurangi sesuai kebutuhan.
-  // Taruh file fotonya di folder assets/images/
-  galeriFoto: [
-    "assets/images/foto-1.jpg",
-    "assets/images/foto-2.jpg",
-    "assets/images/foto-3.jpg",
-    "assets/images/foto-4.jpg"
+  /* ============ 3. LOVE LETTER / SURAT CINTA ============ */
+  suratPembuka: "Dear Aisyah,",
+  suratIsi: [
+    "Hari ini bukan hanya tentang bertambahnya usiamu, tapi tentang merayakan seseorang yang telah membuat dunia terasa lebih indah.",
+    "Setiap momen bersamamu adalah hadiah yang tidak pernah aku minta, tapi selalu aku syukuri setiap harinya.",
+    "Semoga di usia yang baru ini, kamu semakin bahagia, semakin dicintai, dan semakin menjadi dirimu sendiri yang paling indah."
   ],
 
-  // Musik latar (opsional). Set musikAktif ke false kalau tidak pakai musik.
+  /* ============ 4. TIMELINE KENANGAN ============ */
+  // Tambah/kurangi objek di array ini sesuai jumlah momen yang diinginkan
+  timeline: [
+    {
+      judul: "Pertama Bertemu",
+      tanggal: "12 Februari 2021",
+      cerita: "Hari dimana aku pertama kali mengenalmu, dan dunia terasa sedikit lebih berwarna.",
+      foto: "assets/images-contoh/photo-placeholder.svg"
+    },
+    {
+      judul: "Momen Terindah",
+      tanggal: "8 Agustus 2022",
+      cerita: "Saat kita menghabiskan waktu bersama, dan aku sadar aku ingin lebih banyak momen sepertinya.",
+      foto: "assets/images-contoh/photo-placeholder.svg"
+    },
+    {
+      judul: "Hari Ini",
+      tanggal: "Sekarang",
+      cerita: "Aku berharap kita terus membuat cerita baru, satu demi satu, sampai nanti.",
+      foto: "assets/images-contoh/photo-placeholder.svg"
+    }
+  ],
+
+  /* ============ 5. GALERI FOTO KENANGAN ============ */
+  // Tambah/kurangi baris sesuai jumlah foto
+  galeriFoto: [
+    "assets/images-contoh/photo-placeholder.svg",
+    "assets/images-contoh/photo-placeholder.svg",
+    "assets/images-contoh/photo-placeholder.svg",
+    "assets/images-contoh/photo-placeholder.svg"
+  ],
+
+  /* ============ 6. REASONS WHY I LOVE YOU ============ */
+  judulAlasan: "10 Alasan Aku Bersyukur Memilikimu",
+  alasanCinta: [
+    "Senyummu selalu membuat hariku lebih baik",
+    "Kamu selalu menjadi tempat nyaman untuk bercerita",
+    "Kamu membuat hal sederhana menjadi berharga",
+    "Kamu mendengarkan tanpa menghakimi",
+    "Kamu selalu percaya padaku, bahkan saat aku ragu pada diriku sendiri",
+    "Caramu memperhatikan hal-hal kecil tentangku",
+    "Kesabaranmu yang tak pernah habis",
+    "Tawamu yang selalu menular",
+    "Kamu selalu ada, di hari baik maupun buruk",
+    "Kamu adalah rumah, di manapun kita berada"
+  ],
+
+  /* ============ 7. BIRTHDAY WISHES / DOA ============ */
+  doaUcapan: "Semoga langkahmu selalu dipenuhi kebahagiaan, semoga semua impianmu tercapai, dan semoga kamu selalu menjadi versi terbaik dari dirimu.",
+
+  /* ============ 8. SURPRISE SECTION ============ */
+  tombolRahasia: "Ada satu pesan rahasia untukmu...",
+  pesanRahasia: "Aku menyayangimu lebih dari yang bisa aku ungkapkan dengan kata-kata. Terima kasih sudah menjadi kamu. Selamat ulang tahun, sayang. ❤️",
+
+  /* ============ 9. MUSIC PLAYER ============ */
+  // PENTING: file lagu asli (mp3) TIDAK disertakan karena hak cipta.
+  // Isi musikFile dengan lagu yang pembeli punya hak untuk pakai,
+  // taruh filenya di folder assets/music/. Set musikAktif ke false
+  // untuk menyembunyikan player kalau pembeli tidak minta musik.
   musikAktif: true,
+  musikJudul: "Perfect",
+  musikArtis: "Ed Sheeran (contoh — ganti sesuai lagu pilihan pembeli)",
+  musikCover: "assets/images-contoh/music-cover-placeholder.svg",
   musikFile: "assets/music/musik.mp3",
 
-  // Nomor WhatsApp kamu (penjual) untuk tombol "Pesan Template Ini" di halaman ini
-  nomorWhatsapp: "6285733745044",
-  pesanWhatsapp: "Halo, saya juga ingin membuat website ucapan ulang tahun seperti ini",
+  /* ============ 10. CLOSING SECTION ============ */
+  penutupTeks: "Terima kasih sudah hadir di dunia ini. Terima kasih sudah menjadi bagian dari cerita hidupku.",
+  penutupSubteks: "Selamat ulang tahun, seseorang yang selalu punya tempat spesial di hatiku ❤️",
+  pengirim: "— Dari Rangga, dengan segenap hati",
+  tanggalDibuat: "14 Juli 2026",
 
-  // Pengaturan efek confetti saat ucapan dibuka
-  confetti: {
-    aktif: true,
-    warna: ["#C9A24B", "#E7C97A", "#E8A7B3", "#F7F1E6"]
-  }
+  /* ============ KONTAK PENJUAL (tombol "Pesan Template Ini") ============ */
+  nomorWhatsapp: "6285733745044",
+  pesanWhatsapp: "Halo, saya juga ingin membuat website ucapan seperti ini"
 
 };
