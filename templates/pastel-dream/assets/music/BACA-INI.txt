@@ -1,0 +1,2 @@
+Taruh file musik (.mp3) pembeli di sini kalau diminta.
+Sesuaikan namanya di config.js pada bagian "musikFile".

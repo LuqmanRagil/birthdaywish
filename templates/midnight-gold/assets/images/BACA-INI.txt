@@ -1,0 +1,2 @@
+Taruh foto kenangan pembeli di folder ini.
+Nama file bebas, sesuaikan juga di config.js pada bagian "galeriFoto".

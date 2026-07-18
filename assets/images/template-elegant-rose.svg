@@ -1,0 +1,25 @@
+<svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="roseBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#b56576"/>
+      <stop offset="100%" stop-color="#3d1f26"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="500" fill="url(#roseBg)"/>
+
+  <!-- motif bunga mawar sederhana -->
+  <g transform="translate(200,250)" fill="none" stroke="#f3d1d6" stroke-width="1.6" opacity="0.85">
+    <circle r="14"/>
+    <circle r="30"/>
+    <circle r="46"/>
+    <path d="M0 -46 Q 20 -20 0 0 Q -20 -20 0 -46 Z"/>
+  </g>
+
+  <g stroke="#f3d1d6" stroke-width="1.2" fill="none" opacity="0.5">
+    <path d="M90 130 Q 110 100 140 112"/>
+    <path d="M310 140 Q 290 110 260 122"/>
+  </g>
+
+  <text x="200" y="70" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="22" fill="#FFF6F3">Elegant Rose</text>
+  <text x="200" y="95" text-anchor="middle" font-family="Georgia, serif" font-size="12" letter-spacing="2" fill="#f3d1d6">ANGGUN &amp; FEMININ</text>
+</svg>

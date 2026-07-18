@@ -466,3 +466,39 @@ img { max-width: 100%; display: block; }
   .music-player { left: 12px; bottom: 12px; padding: 6px 14px 6px 6px; }
   .music-player-info { max-width: 100px; }
 }
+
+/* =========================================================
+   MODE "TANPA FOTO" — aktif lewat ?foto=0 di URL, atau
+   config.js diset pakaiFoto: false. Foto asli disembunyikan,
+   diganti tampilan dekoratif berbasis warna tema saja.
+   ========================================================= */
+.mode-tanpa-foto .opening-bg { display: none; }
+.mode-tanpa-foto .opening {
+  background: radial-gradient(120% 140% at 50% 10%, var(--plum-deep), var(--plum-darker) 70%);
+}
+
+.mode-tanpa-foto .hero-r-photo { display: none; }
+
+.mode-tanpa-foto .timeline-photo { display: none; }
+.mode-tanpa-foto .timeline-item::after {
+  content: "✦";
+  display: block;
+  color: var(--gold-light);
+  font-size: 1.2rem;
+  margin-bottom: 14px;
+}
+
+.mode-tanpa-foto .polaroid img { display: none; }
+.mode-tanpa-foto .polaroid {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, var(--plum-deep), var(--rose));
+}
+.mode-tanpa-foto .polaroid::after {
+  content: "❤";
+  color: var(--cream);
+  font-size: 1.8rem;
+  opacity: 0.85;
+}

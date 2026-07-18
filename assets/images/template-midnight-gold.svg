@@ -1,0 +1,24 @@
+<svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="midnightBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#16264f"/>
+      <stop offset="100%" stop-color="#070d1f"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="500" fill="url(#midnightBg)"/>
+
+  <!-- bintang -->
+  <g fill="#f0d98c" opacity="0.9">
+    <path d="M120 130 l5 12 12 2 -9 9 2 12 -10 -6 -10 6 2 -12 -9 -9 12 -2 z"/>
+    <circle cx="290" cy="160" r="2.5"/>
+    <circle cx="310" cy="340" r="2"/>
+    <circle cx="90" cy="360" r="2"/>
+  </g>
+
+  <!-- bingkai emas tipis -->
+  <rect x="90" y="200" width="220" height="140" rx="4" fill="none" stroke="#d4af37" stroke-width="1.4" opacity="0.7"/>
+  <circle cx="200" cy="270" r="26" fill="none" stroke="#f0d98c" stroke-width="1.4"/>
+
+  <text x="200" y="90" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#F5F3EC">Midnight Gold</text>
+  <text x="200" y="115" text-anchor="middle" font-family="Georgia, serif" font-size="12" letter-spacing="3" fill="#d4af37">BERKELAS &amp; MISTERIUS</text>
+</svg>

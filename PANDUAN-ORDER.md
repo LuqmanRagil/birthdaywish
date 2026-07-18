@@ -141,6 +141,39 @@ Selamat merayakan momen spesialnya! 💛
 
 ---
 
+## 🏷️ Sistem Tingkatan (Standard / Premium / Eksklusif)
+
+Katalog sekarang terbagi 3 tingkatan, terinspirasi dari struktur katalog undangan
+digital pada umumnya:
+
+| Tingkatan | Template saat ini | Foto Maks. | Video Maks. |
+|---|---|---|---|
+| **Standard** | Birthday Minimalist, Pastel Dream | 4 foto | Tidak ada |
+| **Premium** | Birthday Romantic, Birthday Anime Style, Elegant Rose | 8 foto | 1 video |
+| **Eksklusif** | Birthday Luxury, Midnight Gold | 15 foto | 2 video |
+
+> 📌 **Fase 1 dari rencana besar:** total sudah ada **7 tema** dari target
+> **19 tema** (5 tema baru per tingkatan). Sisanya akan ditambahkan bertahap
+> di sesi-sesi berikutnya — membangun tema baru yang matang (desain +
+> animasi + config) perlu waktu, jadi dikerjakan sedikit demi sedikit agar
+> kualitasnya tetap terjaga.
+
+## 📸 Mode "Foto" vs "Tanpa Foto"
+
+Setiap template sekarang punya 2 cara tampil tanpa perlu folder terpisah:
+- **Lihat** → tampilan normal dengan foto (default)
+- **Tanpa Foto** → foto asli disembunyikan, diganti tampilan dekoratif
+  berbasis warna tema saja (cocok untuk pembeli yang tidak mau kirim foto)
+
+Cara kerjanya lewat parameter URL `?foto=0` di akhir link template, contoh:
+```
+templates/minimalist/index.html?foto=0
+```
+Kamu tidak perlu melakukan apa-apa secara manual — tinggal bagikan link yang
+sesuai (dengan atau tanpa `?foto=0`) ke pembeli sesuai paket yang mereka pilih.
+Kalau mau paksa mode tanpa foto secara permanen di satu pesanan tertentu,
+set `pakaiFoto: false` di `config.js` template itu.
+
 ## 🔁 Kebijakan Revisi
 
 Website menampilkan **"Revisi gratis sampai sesuai"** — artinya tidak ada batas jumlah

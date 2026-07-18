@@ -97,35 +97,24 @@
       <p class="eyebrow center">Katalog</p>
       <h2 class="section-title center">Pilih Gaya Ucapan yang Paling Pas</h2>
       <p class="section-desc center">
-        Setiap template dirancang dengan tema visual berbeda, cocok untuk berbagai karakter dan hubungan —
-        pasangan, sahabat, keluarga, hingga penggemar anime.
+        Setiap template dirancang dengan tema visual berbeda, tersebar dalam 3 tingkatan —
+        dari yang ringkas sampai yang paling mewah. Fase 1 dari koleksi kami, terus bertambah.
       </p>
 
-      <div class="product-grid">
+      <!-- Tab tingkatan -->
+      <div class="tier-tabs" role="tablist">
+        <button class="tier-tab active" data-tier="standard" role="tab">Standard</button>
+        <button class="tier-tab" data-tier="premium" role="tab">Premium</button>
+        <button class="tier-tab" data-tier="eksklusif" role="tab">Eksklusif</button>
+      </div>
 
-        <article class="product-card">
-          <div class="product-media product-romantic">
-            <span class="discount-badge">-35%</span>
-            <img src="assets/images/template-romantic.svg" alt="Preview Template Birthday Romantic" loading="lazy">
-          </div>
-          <div class="product-body">
-            <h3>Birthday Romantic</h3>
-            <p class="product-tag">Untuk pasangan tercinta</p>
-            <p class="product-price">
-              <span class="price-old">Rp85.000</span>
-              <span class="price-new">Rp55.000</span>
-            </p>
-            <p class="product-trust">✔ Revisi gratis sampai sesuai</p>
-            <div class="product-actions">
-              <a href="templates/romantic/index.html" class="btn btn-small btn-outline">Lihat</a>
-              <button class="btn btn-small btn-primary btn-buy" data-template="Birthday Romantic (Rp55.000)">Beli</button>
-            </div>
-          </div>
-        </article>
+      <div class="product-grid" id="productGrid">
 
-        <article class="product-card">
+        <!-- ======= STANDARD ======= -->
+        <article class="product-card" data-tier="standard">
           <div class="product-media product-minimalist">
             <span class="discount-badge">-40%</span>
+            <span class="tier-badge tier-standard">Standard</span>
             <img src="assets/images/template-minimalist.svg" alt="Preview Template Birthday Minimalist" loading="lazy">
           </div>
           <div class="product-body">
@@ -138,34 +127,61 @@
             <p class="product-trust">✔ Revisi gratis sampai sesuai</p>
             <div class="product-actions">
               <a href="templates/minimalist/index.html" class="btn btn-small btn-outline">Lihat</a>
-              <button class="btn btn-small btn-primary btn-buy" data-template="Birthday Minimalist (Rp45.000)">Beli</button>
+              <a href="templates/minimalist/index.html?foto=0" class="btn btn-small btn-outline">Tanpa Foto</a>
             </div>
+            <button class="btn btn-small btn-primary btn-buy btn-buy-full" data-template="Birthday Minimalist (Rp45.000)">Beli</button>
           </div>
         </article>
 
-        <article class="product-card">
-          <div class="product-media product-luxury">
-            <span class="discount-badge">-40%</span>
-            <img src="assets/images/template-luxury.svg" alt="Preview Template Birthday Luxury" loading="lazy">
+        <article class="product-card" data-tier="standard">
+          <div class="product-media product-pastel-dream">
+            <span class="discount-badge">-38%</span>
+            <span class="tier-badge tier-standard">Standard</span>
+            <img src="assets/images/template-pastel-dream.svg" alt="Preview Template Pastel Dream" loading="lazy">
           </div>
           <div class="product-body">
-            <h3>Birthday Luxury</h3>
-            <p class="product-tag">Mewah dan berkelas</p>
+            <h3>Pastel Dream</h3>
+            <p class="product-tag">Ceria &amp; lembut</p>
             <p class="product-price">
-              <span class="price-old">Rp125.000</span>
-              <span class="price-new">Rp75.000</span>
+              <span class="price-old">Rp65.000</span>
+              <span class="price-new">Rp40.000</span>
             </p>
             <p class="product-trust">✔ Revisi gratis sampai sesuai</p>
             <div class="product-actions">
-              <a href="templates/luxury/index.html" class="btn btn-small btn-outline">Lihat</a>
-              <button class="btn btn-small btn-primary btn-buy" data-template="Birthday Luxury (Rp75.000)">Beli</button>
+              <a href="templates/pastel-dream/index.html" class="btn btn-small btn-outline">Lihat</a>
+              <a href="templates/pastel-dream/index.html?foto=0" class="btn btn-small btn-outline">Tanpa Foto</a>
             </div>
+            <button class="btn btn-small btn-primary btn-buy btn-buy-full" data-template="Pastel Dream (Rp40.000)">Beli</button>
           </div>
         </article>
 
-        <article class="product-card">
+        <!-- ======= PREMIUM ======= -->
+        <article class="product-card" data-tier="premium">
+          <div class="product-media product-romantic">
+            <span class="discount-badge">-35%</span>
+            <span class="tier-badge tier-premium">Premium</span>
+            <img src="assets/images/template-romantic.svg" alt="Preview Template Birthday Romantic" loading="lazy">
+          </div>
+          <div class="product-body">
+            <h3>Birthday Romantic</h3>
+            <p class="product-tag">Untuk pasangan tercinta</p>
+            <p class="product-price">
+              <span class="price-old">Rp85.000</span>
+              <span class="price-new">Rp55.000</span>
+            </p>
+            <p class="product-trust">✔ Revisi gratis sampai sesuai</p>
+            <div class="product-actions">
+              <a href="templates/romantic/index.html" class="btn btn-small btn-outline">Lihat</a>
+              <a href="templates/romantic/index.html?foto=0" class="btn btn-small btn-outline">Tanpa Foto</a>
+            </div>
+            <button class="btn btn-small btn-primary btn-buy btn-buy-full" data-template="Birthday Romantic (Rp55.000)">Beli</button>
+          </div>
+        </article>
+
+        <article class="product-card" data-tier="premium">
           <div class="product-media product-anime">
             <span class="discount-badge">-37%</span>
+            <span class="tier-badge tier-premium">Premium</span>
             <img src="assets/images/template-anime.svg" alt="Preview Template Birthday Anime Style" loading="lazy">
           </div>
           <div class="product-body">
@@ -178,11 +194,129 @@
             <p class="product-trust">✔ Revisi gratis sampai sesuai</p>
             <div class="product-actions">
               <a href="templates/anime/index.html" class="btn btn-small btn-outline">Lihat</a>
-              <button class="btn btn-small btn-primary btn-buy" data-template="Birthday Anime Style (Rp50.000)">Beli</button>
+              <a href="templates/anime/index.html?foto=0" class="btn btn-small btn-outline">Tanpa Foto</a>
             </div>
+            <button class="btn btn-small btn-primary btn-buy btn-buy-full" data-template="Birthday Anime Style (Rp50.000)">Beli</button>
           </div>
         </article>
 
+        <article class="product-card" data-tier="premium">
+          <div class="product-media product-elegant-rose">
+            <span class="discount-badge">-37%</span>
+            <span class="tier-badge tier-premium">Premium</span>
+            <img src="assets/images/template-elegant-rose.svg" alt="Preview Template Elegant Rose" loading="lazy">
+          </div>
+          <div class="product-body">
+            <h3>Elegant Rose</h3>
+            <p class="product-tag">Anggun &amp; feminin</p>
+            <p class="product-price">
+              <span class="price-old">Rp95.000</span>
+              <span class="price-new">Rp60.000</span>
+            </p>
+            <p class="product-trust">✔ Revisi gratis sampai sesuai</p>
+            <div class="product-actions">
+              <a href="templates/elegant-rose/index.html" class="btn btn-small btn-outline">Lihat</a>
+              <a href="templates/elegant-rose/index.html?foto=0" class="btn btn-small btn-outline">Tanpa Foto</a>
+            </div>
+            <button class="btn btn-small btn-primary btn-buy btn-buy-full" data-template="Elegant Rose (Rp60.000)">Beli</button>
+          </div>
+        </article>
+
+        <!-- ======= EKSKLUSIF ======= -->
+        <article class="product-card" data-tier="eksklusif">
+          <div class="product-media product-luxury">
+            <span class="discount-badge">-40%</span>
+            <span class="tier-badge tier-eksklusif">Eksklusif</span>
+            <img src="assets/images/template-luxury.svg" alt="Preview Template Birthday Luxury" loading="lazy">
+          </div>
+          <div class="product-body">
+            <h3>Birthday Luxury</h3>
+            <p class="product-tag">Mewah dan berkelas</p>
+            <p class="product-price">
+              <span class="price-old">Rp125.000</span>
+              <span class="price-new">Rp75.000</span>
+            </p>
+            <p class="product-trust">✔ Revisi gratis sampai sesuai</p>
+            <div class="product-actions">
+              <a href="templates/luxury/index.html" class="btn btn-small btn-outline">Lihat</a>
+              <a href="templates/luxury/index.html?foto=0" class="btn btn-small btn-outline">Tanpa Foto</a>
+            </div>
+            <button class="btn btn-small btn-primary btn-buy btn-buy-full" data-template="Birthday Luxury (Rp75.000)">Beli</button>
+          </div>
+        </article>
+
+        <article class="product-card" data-tier="eksklusif">
+          <div class="product-media product-midnight-gold">
+            <span class="discount-badge">-36%</span>
+            <span class="tier-badge tier-eksklusif">Eksklusif</span>
+            <img src="assets/images/template-midnight-gold.svg" alt="Preview Template Midnight Gold" loading="lazy">
+          </div>
+          <div class="product-body">
+            <h3>Midnight Gold</h3>
+            <p class="product-tag">Berkelas &amp; misterius</p>
+            <p class="product-price">
+              <span class="price-old">Rp140.000</span>
+              <span class="price-new">Rp90.000</span>
+            </p>
+            <p class="product-trust">✔ Revisi gratis sampai sesuai</p>
+            <div class="product-actions">
+              <a href="templates/midnight-gold/index.html" class="btn btn-small btn-outline">Lihat</a>
+              <a href="templates/midnight-gold/index.html?foto=0" class="btn btn-small btn-outline">Tanpa Foto</a>
+            </div>
+            <button class="btn btn-small btn-primary btn-buy btn-buy-full" data-template="Midnight Gold (Rp90.000)">Beli</button>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="catalog-roadmap-note">
+        ✨ Ini baru Fase 1 — total <strong>7 tema</strong> dari rencana <strong>19 tema</strong> (5 tema baru per tingkatan). Koleksi terus bertambah bertahap.
+      </p>
+
+      <!-- Tabel perbandingan fitur per tingkatan -->
+      <div class="feature-table-wrap">
+        <table class="feature-table">
+          <thead>
+            <tr>
+              <th>Fitur</th>
+              <th>Standard</th>
+              <th>Premium</th>
+              <th>Eksklusif</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Foto Maksimal</td>
+              <td>4 Foto</td>
+              <td>8 Foto</td>
+              <td>15 Foto</td>
+            </tr>
+            <tr>
+              <td>Video Maksimal</td>
+              <td>Tidak Ada</td>
+              <td>1 Video</td>
+              <td>2 Video</td>
+            </tr>
+            <tr>
+              <td>Request Lagu</td>
+              <td>✔</td>
+              <td>✔</td>
+              <td>✔</td>
+            </tr>
+            <tr>
+              <td>Revisi</td>
+              <td>Gratis sampai sesuai</td>
+              <td>Gratis sampai sesuai</td>
+              <td>Gratis sampai sesuai</td>
+            </tr>
+            <tr>
+              <td>Proses Pengerjaan</td>
+              <td>&lt; 24 jam</td>
+              <td>&lt; 24 jam</td>
+              <td>&lt; 24 jam</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>

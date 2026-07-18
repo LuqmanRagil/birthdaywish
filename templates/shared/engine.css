@@ -227,3 +227,27 @@ img { max-width: 100%; display: block; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   .message-card { padding: 28px; }
 }
+
+/* =========================================================
+   MODE "TANPA FOTO" — aktif lewat ?foto=0 di URL, atau
+   config.js diset pakaiFoto: false. Foto asli disembunyikan,
+   diganti tampilan dekoratif berbasis warna tema saja.
+   ========================================================= */
+.mode-tanpa-foto .gallery-item img,
+.mode-tanpa-foto .cover-photo,
+.mode-tanpa-foto .hero-photo {
+  display: none;
+}
+.mode-tanpa-foto .gallery-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, var(--bg-deep), var(--accent));
+  position: relative;
+}
+.mode-tanpa-foto .gallery-item::after {
+  content: "✦";
+  color: var(--cream);
+  font-size: 1.6rem;
+  opacity: 0.85;
+}

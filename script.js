@@ -53,6 +53,28 @@ document.addEventListener("DOMContentLoaded", () => {
   // Format: kode negara tanpa "+" atau "0" di depan, contoh Indonesia: 6285733745044
   const WHATSAPP_NUMBER = "6285733745044";
 
+  /* ---------- Tab tingkatan (Standard/Premium/Eksklusif) ---------- */
+  const tierTabs = document.querySelectorAll(".tier-tab");
+  const tierCards = document.querySelectorAll(".product-card[data-tier]");
+
+  function showTier(tier) {
+    tierCards.forEach((card) => {
+      card.classList.toggle("tier-visible", card.dataset.tier === tier);
+    });
+  }
+
+  if (tierTabs.length && tierCards.length) {
+    showTier(tierTabs[0].dataset.tier); // tampilkan tab pertama secara default
+
+    tierTabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        tierTabs.forEach((t) => t.classList.remove("active"));
+        tab.classList.add("active");
+        showTier(tab.dataset.tier);
+      });
+    });
+  }
+
   const buyButtons = document.querySelectorAll(".btn-buy");
 
   buyButtons.forEach((button) => {

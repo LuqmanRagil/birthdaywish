@@ -18,12 +18,15 @@ BirthdayWish/
 │   ├── images/               → Ilustrasi preview produk (SVG) & gambar lain
 │   └── icons/                → Favicon & ikon kecil lainnya
 │
-├── templates/                 → 4 PRODUK ASLI yang dijual & dikirim ke pembeli
-│   ├── shared/                 → "Mesin" bersama (engine.css & engine.js)
-│   ├── romantic/                → Paket Birthday Romantic (+ config.js)
-│   ├── minimalist/                → Paket Birthday Minimalist (+ config.js)
-│   ├── luxury/                     → Paket Birthday Luxury (+ config.js)
-│   └── anime/                       → Paket Birthday Anime Style (+ config.js)
+├── templates/                 → PRODUK ASLI yang dijual & dikirim ke pembeli (7 tema, 3 tingkatan)
+│   ├── shared/                  → "Mesin" bersama dipakai tema-tema sederhana
+│   ├── minimalist/                → Standard — Birthday Minimalist
+│   ├── pastel-dream/                → Standard — Pastel Dream
+│   ├── romantic/                      → Premium — Birthday Romantic (struktur khusus 10 bagian)
+│   ├── anime/                           → Premium — Birthday Anime Style
+│   ├── elegant-rose/                      → Premium — Elegant Rose
+│   ├── luxury/                              → Eksklusif — Birthday Luxury
+│   └── midnight-gold/                         → Eksklusif — Midnight Gold
 │
 ├── PANDUAN-ORDER.md           → Cara memproses pesanan sampai kirim ke pembeli
 └── README.md                  → Panduan ini

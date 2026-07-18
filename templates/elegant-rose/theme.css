@@ -1,0 +1,53 @@
+/* =========================================================
+   THEME: ELEGANT ROSE (Tingkatan Premium)
+   Palet rose-gold floral, lebih lembut & feminin dibanding
+   Romantic. Aman diedit untuk menyesuaikan warna.
+   ========================================================= */
+
+:root {
+  --bg-deep: #b56576;
+  --bg-darker: #3d1f26;
+  --accent: #e8b4bc;
+  --accent-light: #f3d1d6;
+  --cream: #FFF6F3;
+  --text-on-dark: #FFF6F3;
+  --footer-bg: rgba(229, 180, 188, 0.1);
+}
+
+.cover {
+  background: radial-gradient(120% 140% at 50% 10%, #b56576, #3d1f26 75%);
+}
+.cover-glow {
+  background: radial-gradient(circle, #f3d1d6 0%, transparent 65%);
+  opacity: 0.3;
+}
+
+/* motif bunga sederhana di sudut layar pembuka */
+.cover-inner::before {
+  content: "❀";
+  position: absolute;
+  top: -34px;
+  left: 12%;
+  font-size: 22px;
+  color: rgba(243, 209, 214, 0.5);
+}
+.cover-inner::after {
+  content: "❀";
+  position: absolute;
+  bottom: -14px;
+  right: 10%;
+  font-size: 18px;
+  color: rgba(243, 209, 214, 0.4);
+}
+
+.message-card {
+  border-color: rgba(243, 209, 214, 0.4);
+  background: rgba(243, 209, 214, 0.06);
+  border-radius: 28px;
+}
+
+.gallery-item { background: linear-gradient(160deg, #b56576, var(--accent)); border-radius: 18px; }
+
+.footer-cta { background: var(--footer-bg); }
+
+.btn-primary { color: #3d1f26; font-weight: 800; }

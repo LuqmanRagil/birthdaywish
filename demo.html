@@ -59,25 +59,17 @@
         lengkap dengan animasi teks, galeri foto, musik, dan efek confetti.
       </p>
 
-      <div class="product-grid">
+      <div class="tier-tabs" role="tablist">
+        <button class="tier-tab active" data-tier="standard" role="tab">Standard</button>
+        <button class="tier-tab" data-tier="premium" role="tab">Premium</button>
+        <button class="tier-tab" data-tier="eksklusif" role="tab">Eksklusif</button>
+      </div>
 
-        <article class="product-card">
-          <div class="product-media product-romantic">
-            <img src="assets/images/template-romantic.svg" alt="Preview Template Birthday Romantic" loading="lazy">
-          </div>
-          <div class="product-body">
-            <h3>Birthday Romantic</h3>
-            <p class="product-tag">Untuk pasangan tercinta</p>
-            <p class="product-price">Rp55.000</p>
-            <div class="product-actions">
-              <a href="templates/romantic/index.html" class="btn btn-small btn-outline" target="_blank" rel="noopener">Lihat</a>
-              <button class="btn btn-small btn-primary btn-buy" data-template="Birthday Romantic (Rp55.000)">Beli</button>
-            </div>
-          </div>
-        </article>
+      <div class="product-grid" id="productGrid">
 
-        <article class="product-card">
+        <article class="product-card" data-tier="standard">
           <div class="product-media product-minimalist">
+            <span class="tier-badge tier-standard">Standard</span>
             <img src="assets/images/template-minimalist.svg" alt="Preview Template Birthday Minimalist" loading="lazy">
           </div>
           <div class="product-body">
@@ -86,28 +78,46 @@
             <p class="product-price">Rp45.000</p>
             <div class="product-actions">
               <a href="templates/minimalist/index.html" class="btn btn-small btn-outline" target="_blank" rel="noopener">Lihat</a>
-              <button class="btn btn-small btn-primary btn-buy" data-template="Birthday Minimalist (Rp45.000)">Beli</button>
+              <a href="templates/minimalist/index.html?foto=0" class="btn btn-small btn-outline" target="_blank" rel="noopener">Tanpa Foto</a>
             </div>
           </div>
         </article>
 
-        <article class="product-card">
-          <div class="product-media product-luxury">
-            <img src="assets/images/template-luxury.svg" alt="Preview Template Birthday Luxury" loading="lazy">
+        <article class="product-card" data-tier="standard">
+          <div class="product-media product-pastel-dream">
+            <span class="tier-badge tier-standard">Standard</span>
+            <img src="assets/images/template-pastel-dream.svg" alt="Preview Template Pastel Dream" loading="lazy">
           </div>
           <div class="product-body">
-            <h3>Birthday Luxury</h3>
-            <p class="product-tag">Mewah dan berkelas</p>
-            <p class="product-price">Rp75.000</p>
+            <h3>Pastel Dream</h3>
+            <p class="product-tag">Ceria &amp; lembut</p>
+            <p class="product-price">Rp40.000</p>
             <div class="product-actions">
-              <a href="templates/luxury/index.html" class="btn btn-small btn-outline" target="_blank" rel="noopener">Lihat</a>
-              <button class="btn btn-small btn-primary btn-buy" data-template="Birthday Luxury (Rp75.000)">Beli</button>
+              <a href="templates/pastel-dream/index.html" class="btn btn-small btn-outline" target="_blank" rel="noopener">Lihat</a>
+              <a href="templates/pastel-dream/index.html?foto=0" class="btn btn-small btn-outline" target="_blank" rel="noopener">Tanpa Foto</a>
             </div>
           </div>
         </article>
 
-        <article class="product-card">
+        <article class="product-card" data-tier="premium">
+          <div class="product-media product-romantic">
+            <span class="tier-badge tier-premium">Premium</span>
+            <img src="assets/images/template-romantic.svg" alt="Preview Template Birthday Romantic" loading="lazy">
+          </div>
+          <div class="product-body">
+            <h3>Birthday Romantic</h3>
+            <p class="product-tag">Untuk pasangan tercinta</p>
+            <p class="product-price">Rp55.000</p>
+            <div class="product-actions">
+              <a href="templates/romantic/index.html" class="btn btn-small btn-outline" target="_blank" rel="noopener">Lihat</a>
+              <a href="templates/romantic/index.html?foto=0" class="btn btn-small btn-outline" target="_blank" rel="noopener">Tanpa Foto</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-tier="premium">
           <div class="product-media product-anime">
+            <span class="tier-badge tier-premium">Premium</span>
             <img src="assets/images/template-anime.svg" alt="Preview Template Birthday Anime Style" loading="lazy">
           </div>
           <div class="product-body">
@@ -116,7 +126,55 @@
             <p class="product-price">Rp50.000</p>
             <div class="product-actions">
               <a href="templates/anime/index.html" class="btn btn-small btn-outline" target="_blank" rel="noopener">Lihat</a>
-              <button class="btn btn-small btn-primary btn-buy" data-template="Birthday Anime Style (Rp50.000)">Beli</button>
+              <a href="templates/anime/index.html?foto=0" class="btn btn-small btn-outline" target="_blank" rel="noopener">Tanpa Foto</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-tier="premium">
+          <div class="product-media product-elegant-rose">
+            <span class="tier-badge tier-premium">Premium</span>
+            <img src="assets/images/template-elegant-rose.svg" alt="Preview Template Elegant Rose" loading="lazy">
+          </div>
+          <div class="product-body">
+            <h3>Elegant Rose</h3>
+            <p class="product-tag">Anggun &amp; feminin</p>
+            <p class="product-price">Rp60.000</p>
+            <div class="product-actions">
+              <a href="templates/elegant-rose/index.html" class="btn btn-small btn-outline" target="_blank" rel="noopener">Lihat</a>
+              <a href="templates/elegant-rose/index.html?foto=0" class="btn btn-small btn-outline" target="_blank" rel="noopener">Tanpa Foto</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-tier="eksklusif">
+          <div class="product-media product-luxury">
+            <span class="tier-badge tier-eksklusif">Eksklusif</span>
+            <img src="assets/images/template-luxury.svg" alt="Preview Template Birthday Luxury" loading="lazy">
+          </div>
+          <div class="product-body">
+            <h3>Birthday Luxury</h3>
+            <p class="product-tag">Mewah dan berkelas</p>
+            <p class="product-price">Rp75.000</p>
+            <div class="product-actions">
+              <a href="templates/luxury/index.html" class="btn btn-small btn-outline" target="_blank" rel="noopener">Lihat</a>
+              <a href="templates/luxury/index.html?foto=0" class="btn btn-small btn-outline" target="_blank" rel="noopener">Tanpa Foto</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-tier="eksklusif">
+          <div class="product-media product-midnight-gold">
+            <span class="tier-badge tier-eksklusif">Eksklusif</span>
+            <img src="assets/images/template-midnight-gold.svg" alt="Preview Template Midnight Gold" loading="lazy">
+          </div>
+          <div class="product-body">
+            <h3>Midnight Gold</h3>
+            <p class="product-tag">Berkelas &amp; misterius</p>
+            <p class="product-price">Rp90.000</p>
+            <div class="product-actions">
+              <a href="templates/midnight-gold/index.html" class="btn btn-small btn-outline" target="_blank" rel="noopener">Lihat</a>
+              <a href="templates/midnight-gold/index.html?foto=0" class="btn btn-small btn-outline" target="_blank" rel="noopener">Tanpa Foto</a>
             </div>
           </div>
         </article>

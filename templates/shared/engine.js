@@ -8,6 +8,13 @@
 document.addEventListener("DOMContentLoaded", () => {
   const CFG = window.CONFIG || {};
 
+  /* ---------- mode Foto / Tanpa Foto (lewat ?foto=0 di URL) ---------- */
+  const params = new URLSearchParams(window.location.search);
+  const modeTanpaFoto = params.get("foto") === "0" || CFG.pakaiFoto === false;
+  if (modeTanpaFoto) {
+    document.body.classList.add("mode-tanpa-foto");
+  }
+
   /* ---------- isi teks dari config ---------- */
   setText("coverEyebrow", CFG.labelAtas);
   setText("coverTitle", CFG.namaPenerima);

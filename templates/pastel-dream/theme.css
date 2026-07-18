@@ -1,0 +1,60 @@
+/* =========================================================
+   THEME: PASTEL DREAM (Tingkatan Standard)
+   Palet pastel lembut (lavender, biru muda, krem), ceria
+   tapi tetap kalem. Aman diedit untuk menyesuaikan warna.
+   ========================================================= */
+
+:root {
+  --bg-deep: #b8c9e8;
+  --bg-darker: #eef1fb;
+  --accent: #8fa8d6;
+  --accent-light: #aebfe8;
+  --cream: #FDFCFB;
+  --text-on-dark: #3a3f52;
+  --footer-bg: rgba(143, 168, 214, 0.1);
+}
+
+body.theme-pastel-dream { background: var(--bg-darker); }
+
+.cover { background: linear-gradient(160deg, #dbe4fb, var(--bg-darker)); }
+.cover-glow { background: radial-gradient(circle, #ffe3ef 0%, transparent 65%); opacity: 0.6; }
+.cover-title { color: var(--accent); }
+.cover-eyebrow { color: var(--accent); }
+.cover-hint { color: rgba(58,63,82,0.5); }
+
+.content { background: var(--bg-darker); }
+.hero-text { color: rgba(58,63,82,0.75); }
+
+.message-card {
+  background: #FFFFFF;
+  border-color: rgba(143,168,214,0.3);
+  box-shadow: 0 20px 50px rgba(58,63,82,0.08);
+  border-radius: 28px;
+}
+.message-text { color: var(--text-on-dark); }
+.message-signature { color: var(--accent); }
+
+.gallery-item {
+  background: linear-gradient(160deg, #dbe4fb, var(--accent));
+  border-radius: 20px;
+}
+
+.music-section { color: rgba(58,63,82,0.7); }
+
+.footer-cta { background: var(--footer-bg); }
+.footer-cta p { color: rgba(58,63,82,0.6); }
+.footer-note { color: rgba(58,63,82,0.45); }
+
+.btn { border-radius: 16px; }
+.btn-primary { color: #FDFCFB; }
+.btn-outline { color: var(--accent); border-color: var(--accent); }
+.btn-outline:hover { background: var(--accent); color: #FDFCFB; }
+
+/* titik-titik dekoratif lembut */
+.hero-section::before {
+  content: "✧";
+  display: block;
+  color: var(--accent);
+  font-size: 1.4rem;
+  margin-bottom: 14px;
+}

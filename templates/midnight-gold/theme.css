@@ -1,0 +1,46 @@
+/* =========================================================
+   THEME: MIDNIGHT GOLD (Tingkatan Eksklusif)
+   Palet navy tua + emas, berkelas & misterius — beda arah
+   dari Luxury (yang bernuansa hitam-emas hangat).
+   ========================================================= */
+
+:root {
+  --bg-deep: #0f1c3f;
+  --bg-darker: #070d1f;
+  --accent: #d4af37;
+  --accent-light: #f0d98c;
+  --cream: #F5F3EC;
+  --text-on-dark: #F5F3EC;
+  --footer-bg: rgba(212, 175, 55, 0.08);
+}
+
+.cover {
+  background: radial-gradient(120% 140% at 50% 10%, #16264f, #070d1f 75%);
+}
+.cover-glow {
+  background: radial-gradient(circle, #f0d98c 0%, transparent 65%);
+  opacity: 0.18;
+}
+.cover-title { text-shadow: 0 0 30px rgba(240, 217, 140, 0.3); }
+
+/* garis bintang tipis dekoratif */
+.cover-inner::before,
+.cover-inner::after {
+  content: "✦";
+  position: absolute;
+  color: rgba(240, 217, 140, 0.5);
+  font-size: 16px;
+}
+.cover-inner::before { top: -28px; left: 16%; }
+.cover-inner::after { bottom: -10px; right: 14%; }
+
+.message-card {
+  border: 1px solid rgba(240, 217, 140, 0.35);
+  background: linear-gradient(160deg, rgba(240,217,140,0.05), rgba(0,0,0,0.2));
+}
+
+.gallery-item { background: linear-gradient(160deg, #16264f, var(--accent)); }
+
+.footer-cta { background: var(--footer-bg); }
+
+.btn-primary { color: #070d1f; font-weight: 800; }
