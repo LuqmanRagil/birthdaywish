@@ -112,6 +112,13 @@ window.CONFIG = {
 
   /* ============ KONTAK PENJUAL (tombol "Pesan Template Ini") ============ */
   nomorWhatsapp: "6285733745044",
-  pesanWhatsapp: "Halo, saya juga ingin membuat website ucapan seperti ini"
+  pesanWhatsapp: "Halo, saya juga ingin membuat website ucapan seperti ini",
+
+  /* ============ EFEK BACKGROUND BERGERAK (ambient, seluruh halaman) ============ */
+  backgroundEffect: {
+    aktif: true,
+    warna: ["#E8A7B3", "#E7C97A"],
+    jumlah: 20
+  }
 
 };

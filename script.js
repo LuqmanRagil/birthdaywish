@@ -97,6 +97,66 @@ document.addEventListener("DOMContentLoaded", () => {
     whatsappFloat.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(pesanFloat)}`;
   }
 
+  /* ---------- Animasi bergerak lembut di background hero (brand ambient) ---------- */
+  startBrandAmbient();
+
+  function startBrandAmbient() {
+    const canvas = document.getElementById("brandAmbientCanvas");
+    if (!canvas) return;
+    const hero = canvas.closest(".hero");
+    const ctx = canvas.getContext("2d");
+
+    function resize() {
+      canvas.width = hero.offsetWidth;
+      canvas.height = hero.offsetHeight;
+    }
+    resize();
+    window.addEventListener("resize", resize);
+
+    const colors = ["#C9A24B", "#E7C97A", "#E8A7B3", "#F7F1E6"];
+    const particles = [];
+    const total = 34;
+
+    for (let i = 0; i < total; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        size: Math.random() * 2.6 + 1.2,
+        color: colors[Math.floor(Math.random() * colors.length)],
+        speedY: -(Math.random() * 0.35 + 0.1),
+        speedX: Math.random() * 0.2 - 0.1,
+        alpha: Math.random() * 0.5 + 0.2,
+        twinkleSpeed: Math.random() * 0.02 + 0.008,
+        twinklePhase: Math.random() * Math.PI * 2,
+      });
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach((p) => {
+        p.y += p.speedY;
+        p.x += p.speedX;
+        p.twinklePhase += p.twinkleSpeed;
+
+        if (p.y < -10) { p.y = canvas.height + 10; p.x = Math.random() * canvas.width; }
+        if (p.x < -10) p.x = canvas.width + 10;
+        if (p.x > canvas.width + 10) p.x = -10;
+
+        const alpha = p.alpha * (0.4 + 0.6 * Math.sin(p.twinklePhase));
+
+        ctx.save();
+        ctx.globalAlpha = Math.max(alpha, 0);
+        ctx.fillStyle = p.color;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+      });
+      requestAnimationFrame(draw);
+    }
+    draw();
+  }
+
   /* =========================================================
      BAGIAN KHUSUS HALAMAN DEMO (demo.html)
      Kode di bawah ini otomatis tidak berjalan kalau elemennya

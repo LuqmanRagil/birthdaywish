@@ -1,0 +1,4 @@
+Taruh file video (.mp4) pembeli di sini kalau paket termasuk fitur video.
+Sesuaikan namanya di config.js pada bagian "videoFile".
+Kalau pembeli tidak minta video, set "videoAktif: false" di config.js
+dan section video akan otomatis disembunyikan.

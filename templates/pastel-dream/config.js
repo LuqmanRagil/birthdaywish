@@ -32,10 +32,24 @@ window.CONFIG = {
   // set false untuk versi "Tanpa Foto" (bisa juga dipicu lewat ?foto=0 di URL)
   pakaiFoto: true,
 
+  // Tingkatan STANDARD: sederhana, tanpa timeline/reasons/video tambahan
+  timelineAktif: false,
+  reasonsAktif: false,
+  videoAktif: false,
+
   confetti: {
     aktif: true,
     warna: ["#8fa8d6", "#ffe3ef", "#c9b6f0", "#FDFCFB"],
     jumlah: 90
+  },
+
+  // Efek background bergerak: gelembung lembut mengambang naik ke atas,
+  // sesuai nuansa "dream" yang playful
+  backgroundEffect: {
+    aktif: true,
+    tipe: "bubbles",
+    warna: ["#8fa8d6", "#ffe3ef", "#c9b6f0"],
+    jumlah: 26
   }
 
 };

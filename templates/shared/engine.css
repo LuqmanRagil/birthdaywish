@@ -33,6 +33,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 img { max-width: 100%; display: block; }
+.center { text-align: center; }
 
 @media (prefers-reduced-motion: reduce) {
   * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
@@ -250,4 +251,86 @@ img { max-width: 100%; display: block; }
   color: var(--cream);
   font-size: 1.6rem;
   opacity: 0.85;
+}
+
+/* =========================================================
+   AMBIENT BACKGROUND — animasi bergerak lembut yang berjalan
+   terus-menerus di seluruh halaman, jenisnya diatur lewat
+   config.js (backgroundEffect.tipe): "bubbles", "sparkle",
+   "shimmer", "stars", "petals". Murni dekoratif, tidak
+   mengganggu keterbacaan konten.
+   ========================================================= */
+.ambient-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* ---------- section: timeline momen (Premium & Eksklusif) ---------- */
+.timeline-r-section { padding: 90px 24px; max-width: 720px; margin: 0 auto; position: relative; z-index: 2; }
+.timeline-r-list { position: relative; padding-left: 40px; }
+.timeline-r-list::before {
+  content: "";
+  position: absolute;
+  left: 10px; top: 6px; bottom: 6px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--accent-light), transparent);
+}
+.timeline-r-item {
+  position: relative;
+  margin-bottom: 42px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+}
+.timeline-r-item.in-view { opacity: 1; transform: translateY(0); }
+.timeline-r-item::before {
+  content: "";
+  position: absolute;
+  left: -34px;
+  top: 6px;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: var(--accent-light);
+  box-shadow: 0 0 0 4px rgba(201,162,75,0.2);
+}
+.timeline-r-item h3 {
+  font-family: var(--font-display);
+  color: var(--accent-light);
+  margin: 0 0 4px;
+  font-size: 1.1rem;
+}
+.timeline-r-date { font-size: 0.78rem; color: rgba(247,241,230,0.5); margin-bottom: 8px; display: block; }
+.timeline-r-item p { margin: 0; color: rgba(247,241,230,0.8); }
+
+/* ---------- section: alasan/wishes tambahan (Premium & Eksklusif) ---------- */
+.reasons-r-section { padding: 20px 24px 90px; max-width: 600px; margin: 0 auto; text-align: center; position: relative; z-index: 2; }
+.reasons-r-list { list-style: none; padding: 0; margin: 0; text-align: left; }
+.reasons-r-list li {
+  display: flex;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(247,241,230,0.1);
+  color: rgba(247,241,230,0.88);
+  font-size: 0.95rem;
+}
+.reasons-r-list li::before { content: "✦"; color: var(--accent-light); flex-shrink: 0; }
+
+/* ---------- section: video (Premium & Eksklusif) ---------- */
+.video-r-section { padding: 20px 24px 90px; max-width: 640px; margin: 0 auto; text-align: center; position: relative; z-index: 2; }
+.video-r-frame {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.35);
+  border: 1px solid rgba(201,162,75,0.3);
+}
+.video-r-frame video { width: 100%; display: block; }
+
+/* pastikan konten utama tampil di atas ambient canvas */
+.cover-inner, .hero-inner, .message-section, .gallery-section, .music-section, .footer-cta {
+  position: relative;
+  z-index: 2;
 }

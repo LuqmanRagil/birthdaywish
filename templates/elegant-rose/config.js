@@ -31,9 +31,50 @@ window.CONFIG = {
 
   pakaiFoto: true,
 
+  // Tingkatan PREMIUM: timeline, reasons, dan video diaktifkan
+  timelineAktif: true,
+  timeline: [
+    {
+      judul: "Kesan Pertama",
+      tanggal: "Awal Mengenal",
+      cerita: "Kesan pertama yang tenang, tapi caramu bicara langsung terasa berbeda dari yang lain."
+    },
+    {
+      judul: "Semakin Dekat",
+      tanggal: "Seiring Waktu",
+      cerita: "Semakin sering bicara, semakin terlihat betapa tulus dan hangatnya dirimu pada semua orang."
+    },
+    {
+      judul: "Hari Ini",
+      tanggal: "Sekarang",
+      cerita: "Hari ini, giliran kami merayakan dan mengucapkan terima kasih atas semua kehangatan itu."
+    }
+  ],
+
+  reasonsAktif: true,
+  judulAlasan: "Alasan Kamu Begitu Dikagumi",
+  alasanList: [
+    "Caramu memperlakukan orang lain dengan penuh hormat",
+    "Ketenanganmu yang menenangkan orang di sekitarmu",
+    "Kata-katamu yang selalu dipikirkan matang-matang sebelum diucapkan",
+    "Kelembutan yang tidak pernah menghilangkan ketegasanmu",
+    "Kehadiranmu yang selalu membawa rasa nyaman"
+  ],
+
+  videoAktif: true,
+  videoFile: "assets/videos/video.mp4",
+
   confetti: {
     aktif: true,
     warna: ["#e8b4bc", "#f3d1d6", "#b56576"]
+  },
+
+  // Efek background bergerak: kelopak mawar melayang jatuh perlahan
+  backgroundEffect: {
+    aktif: true,
+    tipe: "petals",
+    warna: ["#e8b4bc", "#f3d1d6"],
+    jumlah: 22
   }
 
 };

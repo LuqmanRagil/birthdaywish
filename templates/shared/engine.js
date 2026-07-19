@@ -46,6 +46,52 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  /* ---------- timeline momen (opsional, Premium & Eksklusif) ---------- */
+  const timelineSection = document.getElementById("timelineRSection");
+  const timelineList = document.getElementById("timelineRList");
+  if (CFG.timelineAktif && Array.isArray(CFG.timeline) && timelineList) {
+    timelineList.innerHTML = "";
+    CFG.timeline.forEach((item) => {
+      const div = document.createElement("div");
+      div.className = "timeline-r-item";
+      div.innerHTML = `
+        <h3>${escapeHtml(item.judul || "")}</h3>
+        <span class="timeline-r-date">${escapeHtml(item.tanggal || "")}</span>
+        <p>${escapeHtml(item.cerita || "")}</p>
+      `;
+      timelineList.appendChild(div);
+    });
+  } else if (timelineSection) {
+    timelineSection.hidden = true;
+  }
+
+  /* ---------- alasan/wishes tambahan (opsional, Premium & Eksklusif) ---------- */
+  const reasonsSection = document.getElementById("reasonsRSection");
+  const reasonsList = document.getElementById("reasonsRList");
+  if (CFG.reasonsAktif && Array.isArray(CFG.alasanList) && reasonsList) {
+    setText("reasonsRTitle", CFG.judulAlasan);
+    reasonsList.innerHTML = "";
+    CFG.alasanList.forEach((alasan) => {
+      const li = document.createElement("li");
+      li.textContent = alasan;
+      reasonsList.appendChild(li);
+    });
+  } else if (reasonsSection) {
+    reasonsSection.hidden = true;
+  }
+
+  /* ---------- video (opsional, Premium & Eksklusif) ---------- */
+  const videoSection = document.getElementById("videoRSection");
+  const videoEl = document.getElementById("videoRPlayer");
+  if (CFG.videoAktif && CFG.videoFile && videoEl) {
+    const source = document.createElement("source");
+    source.src = CFG.videoFile;
+    source.type = "video/mp4";
+    videoEl.appendChild(source);
+  } else if (videoSection) {
+    videoSection.hidden = true;
+  }
+
   /* ---------- musik (opsional, tergantung config) ---------- */
   const musicSection = document.getElementById("musicSection");
   const bgMusic = document.getElementById("bgMusic");
@@ -95,6 +141,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       launchConfetti(CFG.confetti);
       revealTextLines();
+      setupTimelineReveal();
 
       if (CFG.musikAktif && bgMusic) {
         bgMusic.play().catch(() => {
@@ -104,9 +151,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  /* ---------- ambient background: berjalan terus dari awal halaman ---------- */
+  startAmbientBackground(CFG.backgroundEffect);
+
   function setText(id, value) {
     const el = document.getElementById(id);
     if (el && value !== undefined) el.textContent = value;
+  }
+
+  function escapeHtml(str) {
+    const div = document.createElement("div");
+    div.textContent = str;
+    return div.innerHTML;
   }
 
   function revealTextLines() {
@@ -114,6 +170,194 @@ document.addEventListener("DOMContentLoaded", () => {
     lines.forEach((line, index) => {
       setTimeout(() => line.classList.add("visible"), index * 250);
     });
+  }
+
+  /* reveal timeline item saat discroll ke pandangan */
+  function setupTimelineReveal() {
+    const items = document.querySelectorAll(".timeline-r-item");
+    if (!items.length) return;
+
+    if (!("IntersectionObserver" in window)) {
+      items.forEach((el) => el.classList.add("in-view"));
+      return;
+    }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+    items.forEach((el) => observer.observe(el));
+  }
+
+  /* =========================================================
+     AMBIENT BACKGROUND — animasi bergerak terus-menerus,
+     jenisnya beda tiap tema lewat config.js (backgroundEffect).
+     tipe yang didukung: "bubbles", "sparkle", "shimmer",
+     "stars", "petals", "confetti-soft".
+     ========================================================= */
+  function startAmbientBackground(bgConfig) {
+    const cfg = bgConfig || {};
+    if (cfg.aktif === false || !cfg.tipe) return;
+
+    const canvas = document.getElementById("ambientCanvas");
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+
+    function resize() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    resize();
+    window.addEventListener("resize", resize);
+
+    const colors = cfg.warna || ["#C9A24B", "#E7C97A", "#F7F1E6"];
+    const total = cfg.jumlah || 40;
+    const tipe = cfg.tipe;
+
+    const particles = [];
+    for (let i = 0; i < total; i++) {
+      particles.push(makeParticle());
+    }
+
+    function makeParticle() {
+      const base = {
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        color: colors[Math.floor(Math.random() * colors.length)],
+      };
+      if (tipe === "bubbles") {
+        return Object.assign(base, {
+          size: Math.random() * 14 + 6,
+          speedY: -(Math.random() * 0.5 + 0.2),
+          speedX: Math.random() * 0.3 - 0.15,
+          alpha: Math.random() * 0.35 + 0.15,
+        });
+      }
+      if (tipe === "petals") {
+        return Object.assign(base, {
+          size: Math.random() * 6 + 4,
+          speedY: Math.random() * 0.5 + 0.25,
+          speedX: Math.random() * 0.4 - 0.2,
+          rotation: Math.random() * 360,
+          rotationSpeed: Math.random() * 0.8 - 0.4,
+          alpha: Math.random() * 0.3 + 0.35,
+        });
+      }
+      if (tipe === "shimmer") {
+        return Object.assign(base, {
+          size: Math.random() * 3 + 1.5,
+          speedY: -(Math.random() * 0.3 + 0.1),
+          speedX: 0,
+          alpha: Math.random() * 0.5 + 0.2,
+          twinkleSpeed: Math.random() * 0.02 + 0.01,
+          twinklePhase: Math.random() * Math.PI * 2,
+        });
+      }
+      if (tipe === "stars") {
+        return Object.assign(base, {
+          size: Math.random() * 2 + 1,
+          speedY: 0,
+          speedX: 0,
+          alpha: Math.random() * 0.6 + 0.2,
+          twinkleSpeed: Math.random() * 0.03 + 0.01,
+          twinklePhase: Math.random() * Math.PI * 2,
+        });
+      }
+      /* default: confetti-soft / sparkle */
+      return Object.assign(base, {
+        size: Math.random() * 5 + 3,
+        speedY: Math.random() * 0.6 + 0.2,
+        speedX: Math.random() * 0.4 - 0.2,
+        rotation: Math.random() * 360,
+        rotationSpeed: Math.random() * 1 - 0.5,
+        alpha: Math.random() * 0.4 + 0.25,
+      });
+    }
+
+    let shootingStar = null;
+    function maybeSpawnShootingStar() {
+      if (tipe === "stars" && !shootingStar && Math.random() < 0.003) {
+        shootingStar = {
+          x: Math.random() * canvas.width * 0.5,
+          y: Math.random() * canvas.height * 0.3,
+          speedX: 6,
+          speedY: 3,
+          life: 40,
+        };
+      }
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      particles.forEach((p) => {
+        p.y += p.speedY;
+        p.x += p.speedX;
+
+        if (p.rotation !== undefined) p.rotation += p.rotationSpeed;
+        if (p.twinklePhase !== undefined) p.twinklePhase += p.twinkleSpeed;
+
+        if (p.y < -20) p.y = canvas.height + 10;
+        if (p.y > canvas.height + 20) p.y = -10;
+        if (p.x < -20) p.x = canvas.width + 10;
+        if (p.x > canvas.width + 20) p.x = -10;
+
+        const alpha = p.twinklePhase !== undefined
+          ? p.alpha * (0.5 + 0.5 * Math.sin(p.twinklePhase))
+          : p.alpha;
+
+        ctx.save();
+        ctx.globalAlpha = Math.max(alpha, 0);
+        ctx.translate(p.x, p.y);
+        if (p.rotation !== undefined) ctx.rotate((p.rotation * Math.PI) / 180);
+        ctx.fillStyle = p.color;
+
+        if (tipe === "petals") {
+          ctx.beginPath();
+          ctx.ellipse(0, 0, p.size, p.size / 2, 0, 0, Math.PI * 2);
+          ctx.fill();
+        } else if (tipe === "shimmer" || tipe === "stars") {
+          ctx.beginPath();
+          ctx.arc(0, 0, p.size, 0, Math.PI * 2);
+          ctx.fill();
+        } else if (tipe === "bubbles") {
+          ctx.beginPath();
+          ctx.arc(0, 0, p.size, 0, Math.PI * 2);
+          ctx.strokeStyle = p.color;
+          ctx.lineWidth = 1.2;
+          ctx.stroke();
+        } else {
+          ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size * 0.6);
+        }
+        ctx.restore();
+      });
+
+      maybeSpawnShootingStar();
+      if (shootingStar) {
+        const s = shootingStar;
+        ctx.save();
+        ctx.strokeStyle = "rgba(247,241,230,0.8)";
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(s.x, s.y);
+        ctx.lineTo(s.x - s.speedX * 8, s.y - s.speedY * 8);
+        ctx.stroke();
+        ctx.restore();
+        s.x += s.speedX * 6;
+        s.y += s.speedY * 6;
+        s.life--;
+        if (s.life <= 0 || s.x > canvas.width || s.y > canvas.height) shootingStar = null;
+      }
+
+      requestAnimationFrame(draw);
+    }
+    draw();
   }
 
   /* ---------- confetti: bisa kotak warna-warni ATAU emoji, tergantung tema ---------- */

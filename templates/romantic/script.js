@@ -203,6 +203,9 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ============ Reveal animasi umum (scroll-triggered) ============ */
   setupScrollReveal();
 
+  /* ============ Ambient background (berjalan sejak awal halaman) ============ */
+  startAmbientBackground(CFG.backgroundEffect);
+
   /* =========================================================
      FUNGSI BANTUAN
      ========================================================= */
@@ -282,6 +285,64 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* kelopak bunga jatuh di hero section (ambient, terus berjalan) */
+  /* kelopak bunga ambient melayang di SELURUH halaman (bukan cuma hero) */
+  function startAmbientBackground(bgConfig) {
+    const cfg = bgConfig || {};
+    if (cfg.aktif === false) return;
+
+    const canvas = document.getElementById("ambientCanvas");
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+
+    function resize() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    resize();
+    window.addEventListener("resize", resize);
+
+    const colors = cfg.warna || ["#E8A7B3", "#E7C97A"];
+    const total = cfg.jumlah || 20;
+
+    const petals = [];
+    for (let i = 0; i < total; i++) {
+      petals.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        size: Math.random() * 6 + 4,
+        color: colors[Math.floor(Math.random() * colors.length)],
+        speedY: Math.random() * 0.5 + 0.25,
+        speedX: Math.random() * 0.4 - 0.2,
+        rotation: Math.random() * 360,
+        rotationSpeed: Math.random() * 0.8 - 0.4,
+        alpha: Math.random() * 0.3 + 0.35,
+      });
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      petals.forEach((p) => {
+        p.y += p.speedY;
+        p.x += p.speedX;
+        p.rotation += p.rotationSpeed;
+        if (p.y > canvas.height + 10) { p.y = -10; p.x = Math.random() * canvas.width; }
+        if (p.y < -10) p.y = canvas.height + 10;
+
+        ctx.save();
+        ctx.globalAlpha = p.alpha;
+        ctx.translate(p.x, p.y);
+        ctx.rotate((p.rotation * Math.PI) / 180);
+        ctx.fillStyle = p.color;
+        ctx.beginPath();
+        ctx.ellipse(0, 0, p.size, p.size / 2, 0, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+      });
+      requestAnimationFrame(draw);
+    }
+    draw();
+  }
+
   function startPetals() {
     const canvas = document.getElementById("petalCanvas");
     if (!canvas) return;

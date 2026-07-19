@@ -23,6 +23,13 @@ window.CONFIG = {
     "assets/images/foto-4.jpg"
   ],
 
+  // Tingkatan STANDARD: fokus pada kesederhanaan, jadi timeline,
+  // reasons, dan video sengaja TIDAK diaktifkan (beda dengan
+  // Premium & Eksklusif). Kalau ingin diaktifkan, cukup ubah ke true.
+  timelineAktif: false,
+  reasonsAktif: false,
+  videoAktif: false,
+
   // Tema minimalis biasanya tanpa musik agar tetap tenang, tapi tetap bisa diaktifkan
   musikAktif: false,
   musikFile: "assets/music/musik.mp3",
@@ -35,6 +42,15 @@ window.CONFIG = {
     aktif: true,
     warna: ["#9C8B5E", "#B9A87C", "#EDE6D6"],
     jumlah: 50
+  },
+
+  // Efek background bergerak: partikel debu keemasan yang naik perlahan,
+  // sangat halus supaya tetap terasa "minimalis"
+  backgroundEffect: {
+    aktif: true,
+    tipe: "shimmer",
+    warna: ["#9C8B5E", "#EDE6D6"],
+    jumlah: 18
   }
 
 };
