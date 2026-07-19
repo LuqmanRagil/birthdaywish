@@ -102,7 +102,7 @@ window.CONFIG = {
   musikJudul: "Perfect",
   musikArtis: "Ed Sheeran (contoh — ganti sesuai lagu pilihan pembeli)",
   musikCover: "assets/images-contoh/music-cover-placeholder.svg",
-  musikFile: "assets/music/musik.mp3",
+  musikFile: "assets/music/Virgoun - Bukti.mp3",
 
   /* ============ 10. CLOSING SECTION ============ */
   penutupTeks: "Terima kasih sudah hadir di dunia ini. Terima kasih sudah menjadi bagian dari cerita hidupku.",
